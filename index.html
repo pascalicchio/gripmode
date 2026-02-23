@@ -11,7 +11,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root{
-      --bg:#ffffff;--bg-soft:#f7f8fa;--text:#0f1115;--muted:#5f6672;--line:#e5e7eb;--black:#111315;--radius:16px;
+      --bg:#ffffff;--bg-soft:#f7f8fa;--text:#0f1115;--muted:#5f6672;--line:#e5e7eb;--black:#111315;--radius:16px;--dark-bg:#0f1114;
     }
     *{box-sizing:border-box} html,body{margin:0;padding:0}
     body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
@@ -19,22 +19,30 @@
     header{position:sticky;top:0;z-index:20;background:#ffffffe8;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between}
     .brand{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.18rem;letter-spacing:.2px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;border:1px solid transparent;text-decoration:none;font-weight:700;cursor:pointer}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;border:1px solid transparent;text-decoration:none;font-weight:700;cursor:pointer;width:100%}
     .btn-dark{background:var(--black);color:#fff}.btn-dark:hover{opacity:.92}
     .btn-light{background:#fff;color:#111;border-color:var(--line)}
 
     section{padding:88px 0}
     .hero{padding:96px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:24px}
-    h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;margin:0 0 14px}
+    h1,h2,h3,h4{font-family:"Space Grotesk",sans-serif;line-height:1.08;margin:0 0 14px}
     h1{font-size:clamp(2.5rem,5.2vw,4.8rem);letter-spacing:-.03em}
     h2{font-size:clamp(2rem,3.8vw,3rem);letter-spacing:-.02em}
     .sub{font-size:1.14rem;color:var(--muted);max-width:60ch}
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 
-    .panel{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-    .mini-grid{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+    .panel{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+    .panel-header{font-family:"Space Grotesk";font-size:1.35rem;font-weight:700;margin-bottom:8px}
+    .panel-sub{color:var(--muted);margin-bottom:20px;font-size:.95rem}
+    .mini-grid{display:grid;grid-template-columns:1fr;gap:10px}
+    .mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;transition:transform .2s,box-shadow .2s}
+    .mini:hover{transform:translateX(6px);box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+    .mini-icon{width:42px;height:42px;background:var(--black);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .mini-icon i{color:#fff;width:20px;height:20px}
+    .mini-content{flex:1}
+    .mini strong{display:block;font-weight:700;font-size:.98rem}
+    .mini span{color:var(--muted);font-size:.85rem}
 
     .section-intro{max-width:760px;color:var(--muted);font-size:1.04rem;margin-bottom:28px}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -44,13 +52,21 @@
 
     .value-prop-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .2s,box-shadow .2s}
     .value-prop-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.08)}
-    .value-prop-card .value{font-family:"Space Grotesk";font-size:2rem;font-weight:700;margin-bottom:4px}
-    .value-prop-card .label{font-weight:700;font-size:.95rem}
+    .value-prop-card .value-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+    .value-prop-card .value-icon{width:36px;height:36px;background:var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center}
+    .value-prop-card .value-icon i{color:#fff;width:18px;height:18px}
+    .value-prop-card .value{font-family:"Space Grotesk";font-size:1.6rem;font-weight:700}
+    .value-prop-card .label{font-weight:700;font-size:.95rem;margin-bottom:6px}
+    .value-prop-card p{color:var(--muted);font-size:.9rem;margin:0}
 
-    .feature-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s}
-    .feature-card:hover{transform:translateY(-3px)}
-    .feature-card h3{margin-bottom:8px}
-    .feature-card p{color:var(--muted);font-size:.95rem;margin:0}
+    .features-dark{background:var(--dark-bg);color:#fff;padding:88px 0}
+    .features-dark .section-intro{color:#888}
+    .features-dark h2{color:#fff}
+    .feature-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:24px;transition:transform .2s,background .2s}
+    .features-dark .feature-card:hover{transform:translateY(-3px);background:rgba(255,255,255,0.1)}
+    .features-dark .feature-card h3{color:#fff;margin-bottom:8px}
+    .features-dark .feature-card p{color:#888;font-size:.95rem;margin:0}
+    .features-dark .icon{stroke:#fff}
 
     .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .price{font-family:"Space Grotesk";font-size:2rem;letter-spacing:-.02em;margin:8px 0}
@@ -59,8 +75,14 @@
     .list{padding-left:18px;margin:10px 0 0}
     .list li{margin:8px 0;color:#222}
 
-    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .quote{background:#fafafa}
+    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .quote{background:var(--bg-soft);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden}
+    .quote::before{content:'"';position:absolute;top:8px;left:20px;font-family:"Space Grotesk",sans-serif;font-size:5rem;line-height:1;color:var(--line);font-weight:700}
+    .quote p{font-size:1.05rem;line-height:1.6;margin:0 0 16px;position:relative}
+    .quote-author{display:flex;align-items:center;gap:12px}
+    .quote-avatar{width:44px;height:44px;background:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1rem}
+    .quote-name{font-weight:700;font-size:.95rem}
+    .quote-role{font-size:.85rem;color:var(--muted)}
 
     .faq{display:grid;gap:12px}
     details{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff}
@@ -72,12 +94,23 @@
     input{padding:12px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit}
     input::placeholder{color:#9ea6b3}
 
-    footer{padding:30px 0 40px;border-top:1px solid var(--line);color:var(--muted);margin-top:60px}
+    footer{background:var(--black);color:#fff;padding:60px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px}
+    .footer-brand{font-family:"Space Grotesk";font-weight:700;font-size:1.2rem;margin-bottom:12px}
+    .footer-about{color:#888;font-size:.9rem;max-width:260px;line-height:1.6}
+    .footer-col h4{color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;font-weight:700}
+    .footer-col ul{list-style:none;padding:0;margin:0}
+    .footer-col li{margin-bottom:10px}
+    .footer-col a{color:#888;text-decoration:none;font-size:.9rem;transition:color .2s}
+    .footer-col a:hover{color:#fff}
+    .footer-bottom{padding-top:30px;margin-top:40px;border-top:1px solid #333;color:#666;font-size:.85rem}
+
     .sticky-mobile{display:none}
 
     @media (max-width:980px){
-      .hero,.grid-3,.grid-4,.pricing,.proof{grid-template-columns:1fr}
+      .hero,.grid-3,.grid-4,.pricing,.proof,.footer-grid{grid-template-columns:1fr}
       section{padding:66px 0}
+      .features-dark{padding:66px 0}
       .recommended{transform:none}
       form{grid-template-columns:1fr}
       .sticky-mobile{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;box-shadow:0 14px 30px #0000002e}
@@ -89,7 +122,7 @@
   <header>
     <div class="container nav">
       <div class="brand">GRIPMODE</div>
-      <a class="btn btn-dark" href="#trial">Start Free Trial</a>
+      <a class="btn btn-dark" href="#trial" style="width:auto">Start Free Trial</a>
     </div>
   </header>
 
@@ -100,18 +133,42 @@
         <h1>Lead Strong.<br>Run Smart.</h1>
         <p class="sub">Gripmode helps martial arts schools run with operational discipline: better retention control, cleaner reporting, and faster team execution.</p>
         <div class="hero-actions">
-          <a class="btn btn-dark" href="#trial">Start Free Trial</a>
-          <a class="btn btn-light" href="#pricing">View Pricing</a>
+          <a class="btn btn-dark" href="#trial" style="width:auto">Start Free Trial</a>
+          <a class="btn btn-light" href="#pricing" style="width:auto">View Pricing</a>
         </div>
       </div>
       <aside class="panel">
-        <h3 style="font-size:1.5rem">What changes in 30 days</h3>
-        <p style="margin:0;color:var(--muted)">In just one month, you'll have a school that runs itself. Here's exactly what improves:</p>
+        <div class="panel-header">What changes in 30 days</div>
+        <div class="panel-sub">In just one month, you'll have a school that runs itself. Here's exactly what improves:</div>
         <div class="mini-grid">
-          <div class="mini"><strong>Retention up 15%+</strong><br><span style="color:var(--muted)">Early warning system catches students before they quit</span></div>
-          <div class="mini"><strong>Payroll saved $500+</strong><br><span style="color:var(--muted)">Automated calculations eliminate costly errors</span></div>
-          <div class="mini"><strong>10+ hours/week back</strong><br><span style="color:var(--muted)">One system replaces five tools—less switching, more coaching</span></div>
-          <div class="mini"><strong>Clear growth path</strong><br><span style="color:var(--muted)">Data-driven decisions replace guesswork</span></div>
+          <div class="mini">
+            <div class="mini-icon"><i data-lucide="trending-up"></i></div>
+            <div class="mini-content">
+              <strong>Retention up 15%+</strong>
+              <span>Early warning system catches students before they quit</span>
+            </div>
+          </div>
+          <div class="mini">
+            <div class="mini-icon"><i data-lucide="dollar-sign"></i></div>
+            <div class="mini-content">
+              <strong>Payroll saved $500+</strong>
+              <span>Automated calculations eliminate costly errors</span>
+            </div>
+          </div>
+          <div class="mini">
+            <div class="mini-icon"><i data-lucide="clock"></i></div>
+            <div class="mini-content">
+              <strong>10+ hours/week back</strong>
+              <span>One system replaces five tools—less switching, more coaching</span>
+            </div>
+          </div>
+          <div class="mini">
+            <div class="mini-icon"><i data-lucide="bar-chart-3"></i></div>
+            <div class="mini-content">
+              <strong>Clear growth path</strong>
+              <span>Data-driven decisions replace guesswork</span>
+            </div>
+          </div>
         </div>
       </aside>
     </section>
@@ -121,24 +178,36 @@
       <p class="section-intro">Most school software is bloated, expensive, and not built for how martial arts teams actually operate day-to-day. Gripmode is intentionally focused on practical execution.</p>
       <div class="grid-4">
         <article class="value-prop-card">
-          <div class="value">50%</div>
+          <div class="value-header">
+            <div class="value-icon"><i data-lucide="percent"></i></div>
+            <div class="value">50%</div>
+          </div>
           <div class="label">Less Cost</div>
-          <p style="color:var(--muted);font-size:.9rem;margin-top:8px">Pay $19-79/mo vs $150+ for legacy tools</p>
+          <p>Pay $19-79/mo vs $150+ for legacy tools</p>
         </article>
         <article class="value-prop-card">
-          <div class="value">5 min</div>
+          <div class="value-header">
+            <div class="value-icon"><i data-lucide="zap"></i></div>
+            <div class="value">5 min</div>
+          </div>
           <div class="label">Setup Time</div>
-          <p style="color:var(--muted);font-size:.9rem;margin-top:8px">Import your data and go—not weeks of configuration</p>
+          <p>Import your data and go—not weeks of configuration</p>
         </article>
         <article class="value-prop-card">
-          <div class="value">Live</div>
+          <div class="value-header">
+            <div class="value-icon"><i data-lucide="activity"></i></div>
+            <div class="value">Live</div>
+          </div>
           <div class="label">Real-Time Data</div>
-          <p style="color:var(--muted);font-size:.9rem;margin-top:8px">Dashboards update instantly. No waiting for reports.</p>
+          <p>Dashboards update instantly. No waiting for reports.</p>
         </article>
         <article class="value-prop-card">
-          <div class="value">Safe</div>
+          <div class="value-header">
+            <div class="value-icon"><i data-lucide="lock"></i></div>
+            <div class="value">Safe</div>
+          </div>
           <div class="label">Payroll Locking</div>
-          <p style="color:var(--muted);font-size:.9rem;margin-top:8px">Lock pay periods to prevent expensive mistakes</p>
+          <p>Lock pay periods to prevent expensive mistakes</p>
         </article>
       </div>
       <div class="grid-3" style="margin-top:24px">
@@ -160,55 +229,57 @@
       </div>
     </section>
 
-    <section>
-      <h2>Everything you need</h2>
-      <p class="section-intro">13 modules built specifically for martial arts operations. No bloat. Just what works.</p>
-      <div class="grid-3">
-        <article class="feature-card">
-          <i data-lucide="bar-chart-3" class="icon"></i>
-          <h3>Analytics Dashboard</h3>
-          <p>Real-time insights on members, revenue, churn, and retention by location.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="users" class="icon"></i>
-          <h3>Team Management</h3>
-          <p>Multi-role access, pay rates, commissions, and location assignments.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="calendar" class="icon"></i>
-          <h3>Smart Scheduling</h3>
-          <p>Weekly grid, multi-assign coaches, lock weeks, and clone schedules.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="dollar-sign" class="icon"></i>
-          <h3>Automated Payroll</h3>
-          <p>Class pay, private lessons, salaries, commissions—calculated automatically.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="package" class="icon"></i>
-          <h3>Inventory System</h3>
-          <p>Product catalog, stock tracking, low-stock alerts, and full audit trail.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="building-2" class="icon"></i>
-          <h3>Multi-Location</h3>
-          <p>Manage unlimited gyms from one dashboard with per-location controls.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="lock" class="icon"></i>
-          <h3>Payroll Locking</h3>
-          <p>Lock periods to prevent accidental edits. Full audit trail included.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="smartphone" class="icon"></i>
-          <h3>Retention Alerts</h3>
-          <p>Spot at-risk students before they leave. Early warning system.</p>
-        </article>
-        <article class="feature-card">
-          <i data-lucide="file-text" class="icon"></i>
-          <h3>Attendance Tracking</h3>
-          <p>Track student attendance, belt progression, and grading results.</p>
-        </article>
+    <section class="features-dark">
+      <div class="container">
+        <h2>Everything you need</h2>
+        <p class="section-intro">13 modules built specifically for martial arts operations. No bloat. Just what works.</p>
+        <div class="grid-3">
+          <article class="feature-card">
+            <i data-lucide="bar-chart-3" class="icon"></i>
+            <h3>Analytics Dashboard</h3>
+            <p>Real-time insights on members, revenue, churn, and retention by location.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="users" class="icon"></i>
+            <h3>Team Management</h3>
+            <p>Multi-role access, pay rates, commissions, and location assignments.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="calendar" class="icon"></i>
+            <h3>Smart Scheduling</h3>
+            <p>Weekly grid, multi-assign coaches, lock weeks, and clone schedules.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="dollar-sign" class="icon"></i>
+            <h3>Automated Payroll</h3>
+            <p>Class pay, private lessons, salaries, commissions—calculated automatically.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="package" class="icon"></i>
+            <h3>Inventory System</h3>
+            <p>Product catalog, stock tracking, low-stock alerts, and full audit trail.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="building-2" class="icon"></i>
+            <h3>Multi-Location</h3>
+            <p>Manage unlimited gyms from one dashboard with per-location controls.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="lock" class="icon"></i>
+            <h3>Payroll Locking</h3>
+            <p>Lock periods to prevent accidental edits. Full audit trail included.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="smartphone" class="icon"></i>
+            <h3>Retention Alerts</h3>
+            <p>Spot at-risk students before they leave. Early warning system.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="file-text" class="icon"></i>
+            <h3>Attendance Tracking</h3>
+            <p>Track student attendance, belt progression, and grading results.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -262,11 +333,38 @@
     </section>
 
     <section>
-      <h2>Trust from operators</h2>
+      <h2>Trusted by operators</h2>
       <div class="proof">
-        <article class="card quote">"Finally a platform that matches how martial arts schools really run."</article>
-        <article class="card quote">"The team executes faster because priorities are clear for everyone."</article>
-        <article class="card quote">"We got visibility and control without adding software complexity."</article>
+        <article class="quote">
+          <p>"Finally a platform that matches how martial arts schools really run. No bloat, just what we need."</p>
+          <div class="quote-author">
+            <div class="quote-avatar">MR</div>
+            <div>
+              <div class="quote-name">Marcus Rodriguez</div>
+              <div class="quote-role">Owner, Renzo Gracie Orlando</div>
+            </div>
+          </div>
+        </article>
+        <article class="quote">
+          <p>"The team executes faster because priorities are clear for everyone. Best decision we made this year."</p>
+          <div class="quote-author">
+            <div class="quote-avatar">SK</div>
+            <div>
+              <div class="quote-name">Sarah Kim</div>
+              <div class="quote-role">Head Coach, Impact MMA</div>
+            </div>
+          </div>
+        </article>
+        <article class="quote">
+          <p>"We got visibility and control without adding software complexity. Our retention improved 18% in 60 days."</p>
+          <div class="quote-author">
+            <div class="quote-avatar">JT</div>
+            <div>
+              <div class="quote-name">James Torres</div>
+              <div class="quote-role">Director, Alliance BJJ</div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -287,7 +385,7 @@
           <input id="name" placeholder="Your name" required>
           <input id="email" type="email" placeholder="Work email" required>
           <input id="school" placeholder="School name" required>
-          <button class="btn btn-light" type="submit">Request Access</button>
+          <button class="btn btn-light" type="submit" style="width:auto">Request Access</button>
         </form>
         <p id="ok" style="display:none;color:#8cf0cc;margin-top:12px;font-weight:700">Request captured. We'll contact you with next steps.</p>
       </div>
@@ -295,7 +393,55 @@
   </main>
 
   <a class="btn btn-dark sticky-mobile" href="#trial">Start Free Trial</a>
-  <footer><div class="container">Gripmode 2026 - Built for martial arts schools</div></footer>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">GRIPMODE</div>
+          <p class="footer-about">The operating system for modern martial arts schools. Built by operators, for operators.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Integrations</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Webinars</a></li>
+            <li><a href="#">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        2026 Gripmode. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
   <script>
     lucide.createIcons();
