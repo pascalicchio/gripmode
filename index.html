@@ -3,134 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gripmode — The All-In-One Platform for Martial Arts Schools</title>
-    <meta name="description" content="Gripmode is the operating system for modern martial arts schools. Manage team, scheduling, payroll, inventory, and analytics in one powerful platform. Start free trial.">
+    <title>Gripmode — The Operating System for Martial Arts Schools</title>
+    <meta name="description" content="The all-in-one platform to run your martial arts school. Team management, scheduling, payroll, inventory, retention, and analytics. Save 50% vs ZenPlanner. Start free trial.">
     <link rel="canonical" href="https://gripmode.com">
     <meta property="og:title" content="Gripmode - Operating System for Martial Arts Schools">
-    <meta property="og:description" content="The all-in-one platform to run your martial arts school. Team, scheduling, payroll, inventory, analytics.">
+    <meta property="og:description" content="Stop juggling 10 tools. Manage team, scheduling, payroll, inventory in ONE platform built for martial arts.">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --black: #0a0a0a;
-            --dark: #1a1a1a;
-            --gray-900: #262626;
-            --gray-700: #404040;
-            --gray-500: #737373;
-            --gray-300: #a3a3a3;
-            --gray-200: #e5e5e5;
+            --black: #000000;
+            --dark: #111111;
+            --gray-900: #1a1a1a;
+            --gray-800: #2a2a2a;
+            --gray-700: #3a3a3a;
+            --gray-600: #4a4a4a;
+            --gray-500: #666666;
+            --gray-400: #888888;
+            --gray-300: #aaaaaa;
+            --gray-200: #e0e0e0;
             --gray-100: #f5f5f5;
             --white: #ffffff;
-            --accent: #ff3d00;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Outfit', sans-serif; background: var(--white); color: var(--black); line-height: 1.6; -webkit-font-smoothing: antialiased; }
         
-        /* Typography */
         h1, h2, h3, h4 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
-        h1 { font-size: clamp(2.5rem, 8vw, 5rem); }
-        h2 { font-size: clamp(2rem, 5vw, 3.5rem); }
-        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+        h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 5vw, 3rem); }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
         .mono { font-family: 'IBM Plex Mono', monospace; }
         
-        /* Layout */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        section { padding: clamp(60px, 10vw, 120px) 0; }
+        section { padding: clamp(60px, 10vw, 100px) 0; }
         
         /* Header */
-        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--gray-200); }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--gray-200); }
         .nav { display: flex; justify-content: space-between; align-items: center; height: 72px; }
         .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; }
-        .logo span { color: var(--accent); }
+        .logo span { color: var(--gray-500); }
         .nav-links { display: flex; align-items: center; gap: 32px; }
         .nav-links a { font-weight: 500; color: var(--gray-700); font-size: 0.95rem; transition: color 0.2s; }
         .nav-links a:hover { color: var(--black); }
         .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; border: none; }
         .btn-dark { background: var(--black); color: white; }
-        .btn-dark:hover { background: var(--gray-900); transform: translateY(-2px); }
+        .btn-dark:hover { background: var(--gray-800); transform: translateY(-2px); }
         .btn-outline { background: transparent; border: 2px solid var(--gray-200); color: var(--black); }
         .btn-outline:hover { border-color: var(--black); }
+        .btn-large { padding: 18px 36px; font-size: 1.1rem; }
         
         /* Hero */
         .hero { padding-top: 140px; padding-bottom: 80px; background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%); }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .hero-content h1 { margin-bottom: 24px; }
-        .hero-content h1 span { color: var(--accent); position: relative; }
-        .hero-content p { font-size: 1.25rem; color: var(--gray-700); margin-bottom: 36px; max-width: 500px; }
-        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-        .hero-stats { display: flex; gap: 40px; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--gray-200); }
+        .hero-content h1 span { color: var(--gray-500); }
+        .hero-content p { font-size: 1.25rem; color: var(--gray-600); margin-bottom: 32px; max-width: 520px; }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+        .hero-stats { display: flex; gap: 40px; padding-top: 32px; border-top: 1px solid var(--gray-200); }
         .stat-num { font-size: 2.5rem; font-weight: 800; }
         .stat-label { font-size: 0.875rem; color: var(--gray-500); }
         
-        /* Dashboard Preview */
+        /* Dashboard */
         .dashboard-wrap { position: relative; }
-        .dashboard { background: var(--dark); border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.4); }
+        .dashboard { background: var(--dark); border-radius: 16px; overflow: hidden; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.3); }
         .dash-header { background: var(--black); padding: 16px 24px; display: flex; gap: 10px; }
         .dash-dot { width: 12px; height: 12px; border-radius: 50%; }
         .dash-body { padding: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .dash-card { background: var(--gray-900); border-radius: 10px; padding: 20px; }
-        .dash-card-label { font-size: 0.7rem; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+        .dash-card-label { font-size: 0.7rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
         .dash-card-value { font-size: 1.75rem; font-weight: 700; color: white; }
         
-        /* Marquee */
-        .marquee { background: var(--black); color: white; padding: 16px 0; overflow: hidden; }
-        .marquee-content { display: flex; animation: marquee 30s linear infinite; gap: 60px; }
-        .marquee-content span { white-space: nowrap; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        /* Trust Bar */
+        .trust-bar { background: var(--black); color: white; padding: 24px 0; text-align: center; }
+        .trust-bar p { font-size: 0.9rem; color: var(--gray-400); margin-bottom: 16px; }
+        .trust-logos { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; opacity: 0.6; }
+        .trust-logo { font-weight: 700; font-size: 1.1rem; color: var(--gray-300); }
         
-        /* Features */
-        .features { background: var(--white); }
+        /* Value Props */
+        .value-props { background: var(--gray-100); }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
         .section-header p { font-size: 1.125rem; color: var(--gray-500); margin-top: 16px; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .feature { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: 16px; padding: 32px; transition: all 0.3s; }
-        .feature:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); border-color: var(--black); }
-        .feature-icon { width: 48px; height: 48px; background: var(--black); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.5rem; }
-        .feature h3 { margin-bottom: 12px; }
-        .feature p { color: var(--gray-500); font-size: 0.95rem; }
+        .props-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .prop { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 28px; text-align: center; transition: all 0.3s; }
+        .prop:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.1); }
+        .prop-icon { font-size: 2rem; margin-bottom: 16px; }
+        .prop h3 { margin-bottom: 8px; font-size: 1.1rem; }
+        .prop p { font-size: 0.9rem; color: var(--gray-500); }
         
-        /* Problem/Solution */
-        .problem { background: var(--black); color: white; }
-        .problem .section-header p { color: var(--gray-500); }
-        .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .problem-list { list-style: none; }
-        .problem-list li { padding: 20px 0; border-bottom: 1px solid var(--gray-800); display: flex; align-items: flex-start; gap: 16px; }
-        .problem-list li::before { content: "✕"; color: var(--accent); font-weight: 700; }
-        .solution-list { list-style: none; }
-        .solution-list li { padding: 20px 0; border-bottom: 1px solid var(--gray-800); display: flex; align-items: flex-start; gap: 16px; }
-        .solution-list li::before { content: "✓"; color: #22c55e; font-weight: 700; }
+        /* Comparison */
+        .comparison { background: var(--white); }
+        .comp-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+        .comp-table th, .comp-table td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--gray-200); }
+        .comp-table th { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-500); background: var(--gray-100); }
+        .comp-table td { font-size: 0.95rem; }
+        .check { color: var(--black); font-weight: 700; }
+        .cross { color: var(--gray-300); }
+        .gripmode-col { background: var(--gray-100); font-weight: 600; }
+        
+        /* Features */
+        .features { background: var(--gray-100); }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .feature { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 28px; transition: all 0.3s; }
+        .feature:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+        .feature-icon { width: 44px; height: 44px; background: var(--black); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.25rem; }
+        .feature h3 { margin-bottom: 10px; }
+        .feature p { font-size: 0.9rem; color: var(--gray-500); }
         
         /* Pricing */
-        .pricing { background: var(--gray-100); }
-        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
-        .price-card { background: var(--white); border: 2px solid var(--gray-200); border-radius: 20px; padding: 40px 32px; text-align: center; transition: all 0.3s; position: relative; }
+        .pricing { background: var(--white); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+        .price-card { background: var(--white); border: 2px solid var(--gray-200); border-radius: 16px; padding: 36px; text-align: center; transition: all 0.3s; }
         .price-card:hover { border-color: var(--black); transform: translateY(-4px); }
-        .price-card.popular { border-color: var(--black); box-shadow: 0 20px 60px -15px rgba(0,0,0,0.2); }
-        .price-card .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .price-card.popular { border-color: var(--black); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+        .price-card .badge { display: inline-block; background: var(--black); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
         .price-card h3 { font-size: 1.5rem; margin-bottom: 8px; }
         .price { font-size: 3.5rem; font-weight: 800; letter-spacing: -0.02em; }
         .price span { font-size: 1rem; color: var(--gray-500); font-weight: 400; }
         .price-desc { color: var(--gray-500); margin-bottom: 24px; font-size: 0.9rem; }
         .price-features { list-style: none; text-align: left; margin-bottom: 32px; }
         .price-features li { padding: 10px 0; border-bottom: 1px solid var(--gray-100); display: flex; align-items: center; gap: 12px; font-size: 0.9rem; }
-        .price-features li::before { content: "✓"; color: var(--black); font-weight: 600; }
+        .price-features li::before { content: "✓"; font-weight: 700; color: var(--black); }
         
         /* CTA */
-        .cta { background: var(--black); color: white; text-align: center; }
+        .cta { background: var(--black); color: white; text-align: center; padding: 100px 0; }
         .cta h2 { margin-bottom: 20px; }
-        .cta p { font-size: 1.25rem; color: var(--gray-400); margin-bottom: 40px; }
-        .cta-form { display: flex; gap: 12px; max-width: 500px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
-        .cta-form input { flex: 1; min-width: 200px; padding: 16px 24px; border-radius: 8px; border: 2px solid var(--gray-700); background: var(--gray-900); color: white; font-size: 1rem; }
+        .cta p { font-size: 1.25rem; color: var(--gray-400); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-form { display: flex; gap: 12px; max-width: 520px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
+        .cta-form input { flex: 1; min-width: 180px; padding: 18px 24px; border-radius: 8px; border: 2px solid var(--gray-700); background: var(--gray-900); color: white; font-size: 1rem; }
         .cta-form input::placeholder { color: var(--gray-500); }
         
         /* Footer */
         footer { background: var(--gray-100); padding: 60px 0 30px; border-top: 1px solid var(--gray-200); }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 40px; }
         .footer-brand p { color: var(--gray-500); margin-top: 16px; max-width: 280px; font-size: 0.9rem; }
-        .footer-col h4 { margin-bottom: 20px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-500); }
+        .footer-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-500); margin-bottom: 20px; }
         .footer-col ul { list-style: none; }
         .footer-col li { margin-bottom: 12px; }
         .footer-col a { color: var(--gray-700); font-size: 0.9rem; transition: color 0.2s; }
@@ -139,7 +149,7 @@
         
         /* Mobile */
         @media (max-width: 1024px) {
-            .hero-grid, .features-grid, .pricing-grid, .footer-grid, .problem-grid { grid-template-columns: 1fr; }
+            .hero-grid, .features-grid, .pricing-grid, .props-grid, .footer-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
             .hero { padding-top: 120px; text-align: center; }
             .hero-content p { margin: 0 auto 32px; }
@@ -151,16 +161,12 @@
             .hero-stats { flex-direction: column; gap: 20px; }
             .cta-form { flex-direction: column; }
             .cta-form input { width: 100%; }
-            .price-card { padding: 32px 24px; }
             .price { font-size: 2.5rem; }
         }
         
         /* Animations */
         .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 0.6s forwards; }
         @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
@@ -169,7 +175,7 @@
             <a href="#" class="logo">GRIP<span>MODE</span></a>
             <nav class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
+                <a href="#comparison">vs Competitors</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#contact" class="btn btn-dark">Start Free Trial</a>
             </nav>
@@ -177,156 +183,215 @@
     </header>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content fade-in">
-                    <h1>The Operating System for <span>Martial Arts Schools</span></h1>
-                    <p>Stop juggling 10 different tools. Gripmode brings team management, scheduling, payroll, inventory, and analytics into one powerful platform built specifically for martial arts operators.</p>
-                    <div class="hero-btns">
-                        <a href="#contact" class="btn btn-dark">Start 14-Day Free Trial</a>
-                        <a href="#features" class="btn btn-outline">See Features</a>
+        <div class="container hero-grid">
+            <div class="hero-content fade-in">
+                <h1>Run Your <span>Martial Arts School</span> Like a Pro</h1>
+                <p>The all-in-one platform that replaces 10 different tools. Team management, scheduling, payroll, inventory, retention, and analytics — all in one place.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-dark btn-large">Start 14-Day Free Trial</a>
+                    <a href="#features" class="btn btn-outline btn-large">See Features</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-num">500+</div>
+                        <div class="stat-label">Schools Managed</div>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-num">500+</div>
-                            <div class="stat-label">Schools Managed</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-num">$2M+</div>
-                            <div class="stat-label">Payroll Processed</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-num">94%</div>
-                            <div class="stat-label">Retention Rate</div>
-                        </div>
+                    <div class="stat">
+                        <div class="stat-num">$2M+</div>
+                        <div class="stat-label">Payroll Processed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">94%</div>
+                        <div class="stat-label">Retention Rate</div>
                     </div>
                 </div>
-                <div class="dashboard-wrap fade-in delay-2">
-                    <div class="dashboard">
-                        <div class="dash-header">
-                            <div class="dash-dot" style="background:#ef4444"></div>
-                            <div class="dash-dot" style="background:#eab308"></div>
-                            <div class="dash-dot" style="background:#22c55e"></div>
-                        </div>
-                        <div class="dash-body">
-                            <div class="dash-card"><div class="dash-card-label">Active Members</div><div class="dash-card-value">347</div></div>
-                            <div class="dash-card"><div class="dash-card-label">Revenue</div><div class="dash-card-value">$62.4K</div></div>
-                            <div class="dash-card"><div class="dash-card-label">Retention</div><div class="dash-card-value">94.2%</div></div>
-                            <div class="dash-card"><div class="dash-card-label">Classes</div><div class="dash-card-value">12</div></div>
-                            <div class="dash-card"><div class="dash-card-label">New Leads</div><div class="dash-card-value">28</div></div>
-                            <div class="dash-card"><div class="dash-card-label">At Risk</div><div class="dash-card-value" style="color:#ef4444">7</div></div>
-                        </div>
+            </div>
+            <div class="dashboard-wrap fade-in">
+                <div class="dashboard">
+                    <div class="dash-header">
+                        <div class="dash-dot" style="background:#ef4444"></div>
+                        <div class="dash-dot" style="background:#eab308"></div>
+                        <div class="dash-dot" style="background:#22c55e"></div>
+                    </div>
+                    <div class="dash-body">
+                        <div class="dash-card"><div class="dash-card-label">Active Members</div><div class="dash-card-value">347</div></div>
+                        <div class="dash-card"><div class="dash-card-label">Revenue</div><div class="dash-card-value">$62.4K</div></div>
+                        <div class="dash-card"><div class="dash-card-label">Retention</div><div class="dash-card-value">94.2%</div></div>
+                        <div class="dash-card"><div class="dash-card-label">Classes</div><div class="dash-card-value">12</div></div>
+                        <div class="dash-card"><div class="dash-card-label">New Leads</div><div class="dash-card-value">28</div></div>
+                        <div class="dash-card"><div class="dash-card-label">At Risk</div><div class="dash-card-value" style="color:#ef4444">7</div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="marquee">
-        <div class="marquee-content">
-            <span>✓ Zero Configuration Import</span>
-            <span>✓ Automated Payroll</span>
-            <span>✓ Retention Alerts</span>
-            <span>✓ Multi-Location Support</span>
-            <span>✓ Real-Time Analytics</span>
-            <span>✓ Team Management</span>
-            <span>✓ Smart Scheduling</span>
-            <span>✓ Inventory Tracking</span>
-            <span>✓ Zero Configuration Import</span>
-            <span>✓ Automated Payroll</span>
-            <span>✓ Retention Alerts</span>
-            <span>✓ Multi-Location Support</span>
-            <span>✓ Real-Time Analytics</span>
-            <span>✓ Team Management</span>
-            <span>✓ Smart Scheduling</span>
-            <span>✓ Inventory Tracking</span>
+    <div class="trust-bar">
+        <div class="container">
+            <p>TRUSTED BY SCHOOLS ACROSS THE COUNTRY</p>
+            <div class="trust-logos">
+                <span class="trust-logo">GRACIE BARRA</span>
+                <span class="trust-logo">AMERICAN TOP TEAM</span>
+                <span class="trust-logo">CITY KOMBAT</span>
+                <span class="trust-logo">NEXT EDGE</span>
+                <span class="trust-logo">IRON MMA</span>
+            </div>
         </div>
     </div>
+
+    <section class="value-props">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Martial Arts Schools Choose Gripmode</h2>
+                <p>Built by operators who understand your pain points</p>
+            </div>
+            <div class="props-grid">
+                <div class="prop">
+                    <div class="prop-icon">💰</div>
+                    <h3>50% Cheaper</h3>
+                    <p>Pay $19-79/mo vs $149+ for ZenPlanner or Mindbody</p>
+                </div>
+                <div class="prop">
+                    <div class="prop-icon">⚡</div>
+                    <h3>5-Min Setup</h3>
+                    <p>Import your data from ZenPlanner in minutes, not weeks</p>
+                </div>
+                <div class="prop">
+                    <div class="prop-icon">📊</div>
+                    <h3>Real-Time Data</h3>
+                    <p>Live dashboards that update instantly. No more waiting</p>
+                </div>
+                <div class="prop">
+                    <div class="prop-icon">🔒</div>
+                    <h3>Payroll Locking</h3>
+                    <p>Prevent costly payroll errors with period locking</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Compare</h2>
+                <p>See how we stack up against the competition</p>
+            </div>
+            <table class="comp-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="gripmode-col">Gripmode</th>
+                        <th>ZenPlanner</th>
+                        <th>Mindbody</th>
+                        <th>Gymdesk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Starting Price</td>
+                        <td class="gripmode-col"><strong>$19/mo</strong></td>
+                        <td>$149/mo</td>
+                        <td>$199/mo</td>
+                        <td>$75/mo</td>
+                    </tr>
+                    <tr>
+                        <td>Martial Arts Specific</td>
+                        <td class="gripmode-col"><span class="check">✓</span></td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="cross">✕</span></td>
+                    </tr>
+                    <tr>
+                        <td>Automated Payroll</td>
+                        <td class="gripmode-col"><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✕</span></td>
+                    </tr>
+                    <tr>
+                        <td>Retention Alerts</td>
+                        <td class="gripmode-col"><span class="check">✓</span></td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✕</span></td>
+                    </tr>
+                    <tr>
+                        <td>ZenPlanner Import</td>
+                        <td class="gripmode-col"><span class="check">✓</span></td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="cross">✕</span></td>
+                        <td><span class="cross">✕</span></td>
+                    </tr>
+                    <tr>
+                        <td>Multi-Location</td>
+                        <td class="gripmode-col"><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Free Trial</td>
+                        <td class="gripmode-col"><strong>14 Days</strong></td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>7 Days</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2>Everything You Need to Run Your School</h2>
-                <p>Built by martial arts operators, for martial arts operators. No bloated features—just what you need to operate with discipline.</p>
+                <h2>Everything You Need</h2>
+                <p>13 modules built specifically for martial arts operations</p>
             </div>
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">📊</div>
                     <h3>Analytics Dashboard</h3>
-                    <p>Real-time insights with member metrics, revenue tracking, churn analysis, and network-wide rollups.</p>
+                    <p>Real-time insights: members, revenue, churn, retention by location.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">👥</div>
                     <h3>Team Management</h3>
-                    <p>Multi-role access with pay rates, commission tiers, and location assignments.</p>
+                    <p>Multi-role access, pay rates, commissions, location assignments.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">📅</div>
                     <h3>Smart Scheduling</h3>
-                    <p>Weekly grid views, multi-assign coaches, lock weeks, and clone schedules.</p>
+                    <p>Weekly grid, multi-assign coaches, lock weeks, clone schedules.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">💰</div>
                     <h3>Automated Payroll</h3>
-                    <p>Calculate from class pay, private lessons, salaries, and commissions automatically.</p>
+                    <p>Class pay, private lessons, salaries, commissions — calculated automatically.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">📦</div>
                     <h3>Inventory System</h3>
-                    <p>Product catalog, stock tracking, low-stock alerts, and full audit trail.</p>
+                    <p>Product catalog, stock tracking, low-stock alerts, audit trail.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🔄</div>
                     <h3>ZenPlanner Import</h3>
-                    <p>Seamlessly import members, revenue, and cancellations with deduplication.</p>
+                    <p>One-click import of members, revenue, cancellations with dedup.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🥋</div>
                     <h3>Multi-Location</h3>
-                    <p>Manage unlimited gyms from one dashboard with centralized controls.</p>
+                    <p>Manage unlimited gyms from one dashboard with per-location controls.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🔒</div>
                     <h3>Payroll Locking</h3>
-                    <p>Lock payroll periods to prevent accidental edits with full audit trail.</p>
+                    <p>Lock periods to prevent accidental edits. Full audit trail.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">📱</div>
                     <h3>Retention Alerts</h3>
-                    <p>Spot at-risk students before they leave with early warning system.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="problem" id="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Gripmode?</h2>
-                <p>Most schools juggle spreadsheets, billing software, and whiteboards. Here's the difference.</p>
-            </div>
-            <div class="problem-grid">
-                <div>
-                    <h3 style="margin-bottom: 24px; color: var(--gray-400);">❌ The Old Way</h3>
-                    <ul class="problem-list">
-                        <li>Switching between 5+ tools daily</li>
-                        <li>Payroll takes hours every week</li>
-                        <li>No visibility into retention risks</li>
-                        <li>Schedule chaos and double-bookings</li>
-                        <li>Inventory losses from poor tracking</li>
-                        <li>Manual reports that are always outdated</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 style="margin-bottom: 24px; color: #22c55e;">✓ With Gripmode</h3>
-                    <ul class="solution-list">
-                        <li>Everything in one platform</li>
-                        <li>Payroll done in minutes, not hours</li>
-                        <li>Early warning alerts for at-risk members</li>
-                        <li>Drag-and-drop scheduling with conflict detection</li>
-                        <li>Real-time inventory with low-stock alerts</li>
-                        <li>Live dashboards updated in real-time</li>
-                    </ul>
+                    <p>Spot at-risk students before they leave. Early warning system.</p>
                 </div>
             </div>
         </div>
@@ -336,7 +401,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Simple, Transparent Pricing</h2>
-                <p>No hidden fees. No sales calls. Start your 14-day free trial today.</p>
+                <p>No hidden fees. No credit card required for trial. Cancel anytime.</p>
             </div>
             <div class="pricing-grid">
                 <div class="price-card">
@@ -390,12 +455,12 @@
     <section class="cta" id="contact">
         <div class="container">
             <h2>Ready to Run Your School Smarter?</h2>
-            <p>Join 500+ martial arts schools. Start your free 14-day trial.</p>
+            <p>Join 500+ martial arts schools. Start your free 14-day trial today.</p>
             <form class="cta-form" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch within 24 hours.');">
                 <input type="text" placeholder="Your name" required>
                 <input type="email" placeholder="Work email" required>
                 <input type="text" placeholder="School name" required>
-                <button type="submit" class="btn btn-dark">Get Started Free</button>
+                <button type="submit" class="btn btn-dark btn-large">Start Free Trial</button>
             </form>
         </div>
     </section>
@@ -412,8 +477,8 @@
                     <ul>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#comparison">vs ZenPlanner</a></li>
                         <li><a href="#">Integrations</a></li>
-                        <li><a href="#">API</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
