@@ -59,7 +59,8 @@
     .value-prop-card .label{font-weight:700;font-size:.95rem;margin-bottom:6px}
     .value-prop-card p{color:var(--muted);font-size:.9rem;margin:0}
 
-    .features-dark{background:var(--dark-bg);color:#fff;padding:88px 0}
+    .features-dark{background:var(--dark-bg);color:#fff;padding:88px 0;margin:0;width:100%}
+    .features-dark .container{max-width:1180px;margin:0 auto;padding:0 24px}
     .features-dark .section-intro{color:#888}
     .features-dark h2{color:#fff}
     .feature-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:24px;transition:transform .2s,background .2s}
@@ -91,7 +92,8 @@
     .cta{background:#0f1115;color:#fff;border-radius:20px;padding:34px}
     .cta p{color:#c2c7d1}
     form{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;margin-top:14px}
-    input{padding:12px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit}
+    input{padding:12px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;transition:background .2s}
+    input:focus{background:#fff;color:#000;outline:none;border-color:#fff}
     input::placeholder{color:#9ea6b3}
 
     footer{background:var(--black);color:#fff;padding:60px 0 30px}
@@ -142,28 +144,20 @@
         <div class="panel-sub">In just one month, you'll have a school that runs itself. Here's exactly what improves:</div>
         <div class="mini-grid">
           <div class="mini">
-            <div class="mini-icon"><i data-lucide="trending-up"></i></div>
-            <div class="mini-content">
-              <strong>Retention up 15%+</strong>
-              <span>Early warning system catches students before they quit</span>
-            </div>
-          </div>
-          <div class="mini">
-            <div class="mini-icon"><i data-lucide="dollar-sign"></i></div>
+            <div class="mini-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
             <div class="mini-content">
               <strong>Payroll saved $500+</strong>
               <span>Automated calculations eliminate costly errors</span>
             </div>
           </div>
           <div class="mini">
-            <div class="mini-icon"><i data-lucide="clock"></i></div>
+            <div class="mini-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <div class="mini-content">
               <strong>10+ hours/week back</strong>
-              <span>One system replaces five tools—less switching, more coaching</span>
             </div>
           </div>
           <div class="mini">
-            <div class="mini-icon"><i data-lucide="bar-chart-3"></i></div>
+            <div class="mini-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
             <div class="mini-content">
               <strong>Clear growth path</strong>
               <span>Data-driven decisions replace guesswork</span>
@@ -179,7 +173,7 @@
       <div class="grid-4">
         <article class="value-prop-card">
           <div class="value-header">
-            <div class="value-icon"><i data-lucide="percent"></i></div>
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
             <div class="value">50%</div>
           </div>
           <div class="label">Less Cost</div>
@@ -187,7 +181,7 @@
         </article>
         <article class="value-prop-card">
           <div class="value-header">
-            <div class="value-icon"><i data-lucide="zap"></i></div>
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <div class="value">5 min</div>
           </div>
           <div class="label">Setup Time</div>
@@ -195,7 +189,7 @@
         </article>
         <article class="value-prop-card">
           <div class="value-header">
-            <div class="value-icon"><i data-lucide="activity"></i></div>
+            <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
             <div class="value">Live</div>
           </div>
           <div class="label">Real-Time Data</div>
@@ -203,7 +197,7 @@
         </article>
         <article class="value-prop-card">
           <div class="value-header">
-            <div class="value-icon"><i data-lucide="lock"></i></div>
+            <div class="value-icon"><svg xmlns="http://www.w3.org" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
             <div class="value">Safe</div>
           </div>
           <div class="label">Payroll Locking</div>
