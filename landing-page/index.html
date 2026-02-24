@@ -48,6 +48,15 @@
     .list{padding-left:18px;margin:10px 0 0}
     .list li{margin:8px 0;color:#222}
 
+    .dark-section{background:#0f1114;color:#fff;margin:88px 0 0;padding:88px 0}
+    .dark-section .container{max-width:1180px;margin:0 auto;padding:0 24px}
+    .dark-section h2{color:#fff}
+    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:#1a1d23;border:1px solid #2a2e36;border-radius:var(--radius);padding:22px}
+    .feature h3{color:#fff;font-size:1.1rem}
+    .feature p{color:#9ca3af;margin:0}
+    .feature-icon{width:22px;height:22px;stroke:#fff;margin-bottom:12px}
+
     .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .quote{background:#fafafa}
 
@@ -201,6 +210,60 @@
       </div>
     </section>
   </main>
+
+  <section class="dark-section">
+    <div class="container">
+      <h2>Everything you need</h2>
+      <p style="color:#9ca3af;margin-bottom:28px;max-width:760px">13 modules built specifically for martial arts operations. No bloat. Just what works.</p>
+      <div class="features-grid">
+        <article class="feature">
+          <i data-lucide="bar-chart-3" class="feature-icon"></i>
+          <h3>Analytics Dashboard</h3>
+          <p>Real-time insights on members, revenue, churn, and retention by location.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="users" class="feature-icon"></i>
+          <h3>Team Management</h3>
+          <p>Multi-role access, pay rates, commissions, and location assignments.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="calendar" class="feature-icon"></i>
+          <h3>Smart Scheduling</h3>
+          <p>Weekly grid, multi-assign coaches, lock weeks, and clone schedules.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="wallet" class="feature-icon"></i>
+          <h3>Automated Payroll</h3>
+          <p>Class pay, private lessons, salaries, commissions—calculated automatically.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="package" class="feature-icon"></i>
+          <h3>Inventory System</h3>
+          <p>Product catalog, stock tracking, low-stock alerts, and full audit trail.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="buildings" class="feature-icon"></i>
+          <h3>Multi-Location</h3>
+          <p>Manage unlimited gyms from one dashboard with per-location controls.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="lock" class="feature-icon"></i>
+          <h3>Payroll Locking</h3>
+          <p>Lock periods to prevent accidental edits. Full audit trail included.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="trending-down" class="feature-icon"></i>
+          <h3>Retention Alerts</h3>
+          <p>Spot at-risk students before they leave. Early warning system.</p>
+        </article>
+        <article class="feature">
+          <i data-lucide="clipboard-check" class="feature-icon"></i>
+          <h3>Attendance Tracking</h3>
+          <p>Track student attendance, belt progression, and grading results.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <a class="btn btn-dark sticky-mobile" href="#trial">Start Free Trial</a>
   <footer><div class="container">Gripmode © 2026 · Built for martial arts schools</div></footer>
