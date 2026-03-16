@@ -1,0 +1,10 @@
+<section id="trial" style="padding:88px 0">
+  <div class="gm-container">
+    <div style="background:#0f1115;color:#fff;border-radius:20px;padding:48px">
+      <h2 style="color:#fff;margin-bottom:8px">{{ ctaHeading or "Start your 7-day free trial" }}</h2>
+      <p style="color:#c2c7d1;margin-bottom:0">{{ ctaSubtext or "No credit card required. Get full access instantly — your school is live in minutes." }}</p>
+      {% set formId = "Cta" %}
+      {% include "signup-form.njk" %}
+    </div>
+  </div>
+</section>

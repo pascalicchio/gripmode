@@ -1,0 +1,147 @@
+---
+layout: layout.njk
+pagination:
+  data: bestFor
+  size: 1
+  alias: page_data
+permalink: "/best-for/{{ page_data.slug }}/"
+eleventyComputed:
+  title: "{{ page_data.title }} — Gripmode"
+  metaDesc: "{{ page_data.metaDesc }}"
+  breadcrumbs:
+    - { name: "Home", url: "/" }
+    - { name: "Best For", url: "/best-for/" }
+    - { name: "{{ page_data.title }}", url: "/best-for/{{ page_data.slug }}/" }
+---
+
+{% block extraHead %}
+<style>
+  :root{
+    --bg:#ffffff;--bg-soft:#f7f8fa;--text:#0f1115;--muted:#5f6672;--line:#e5e7eb;--black:#111315;--radius:16px;
+  }
+  section{padding:88px 0}
+  .bf-hero{padding:96px 0 64px;max-width:760px}
+  .bf-hero .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:24px}
+  .sub{font-size:1.14rem;color:var(--muted);max-width:64ch;line-height:1.7}
+
+  .section-label{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:20px}
+
+  .criteria-list{list-style:none;padding:0;margin:24px 0 0}
+  .criteria-list li{padding:16px 0;border-bottom:1px solid var(--line);font-size:1rem;color:var(--text);display:flex;align-items:center;gap:14px;font-weight:500}
+  .criteria-list li:last-child{border-bottom:none}
+  .criteria-list li .icon{width:20px;height:20px;stroke-width:2.1;color:var(--black);flex-shrink:0}
+
+  .competitors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+  .competitor-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s,box-shadow .2s}
+  .competitor-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+  .competitor-card h3{font-family:"Space Grotesk",sans-serif;font-size:1.05rem;margin-bottom:8px}
+  .competitor-card p{color:var(--muted);font-size:.92rem;margin:0;line-height:1.6}
+
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .why-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .2s,box-shadow .2s}
+  .why-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+  .why-card .icon{width:20px;height:20px;stroke-width:2.1;margin-bottom:10px;color:var(--black)}
+  .why-card p{color:var(--muted);font-size:.93rem;margin:0;line-height:1.6}
+
+  .highlight-block{background:var(--black);color:#fff;border-radius:var(--radius);padding:40px;margin-top:32px}
+  .highlight-block h3{font-family:"Space Grotesk",sans-serif;font-size:1.3rem;color:#fff;margin-bottom:16px}
+  .highlight-block ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .highlight-block ul li{font-size:.95rem;color:#c2c7d1;display:flex;align-items:center;gap:10px}
+  .highlight-block ul li .icon{width:16px;height:16px;color:#fff;flex-shrink:0}
+
+  @media (max-width:980px){
+    section{padding:66px 0}
+    .bf-hero{padding:72px 0 48px}
+    .competitors-grid,.why-grid{grid-template-columns:1fr}
+    .highlight-block ul{grid-template-columns:1fr}
+  }
+</style>
+{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page_data.title }}",
+  "description": "{{ page_data.metaDesc }}",
+  "url": "https://gripmode.app/best-for/{{ page_data.slug }}/"
+}
+</script>
+{% endblock %}
+
+<div class="gm-container">
+
+  <!-- Hero -->
+  <section class="bf-hero">
+    <span class="eyebrow"><i data-lucide="award" style="width:16px;height:16px"></i> 2026 Guide</span>
+    <h1>{{ page_data.heading }}</h1>
+    <p class="sub">{{ page_data.intro }}</p>
+  </section>
+
+  <!-- What to Look For -->
+  <section style="padding-top:0">
+    <span class="section-label"><i data-lucide="search" style="width:14px;height:14px"></i> Evaluation Criteria</span>
+    <h2>What to Look For</h2>
+    <p class="sub">Before choosing software, make sure it meets these essential criteria for your school type.</p>
+    <ul class="criteria-list">
+      {% for criterion in page_data.criteria %}
+      <li><i data-lucide="crosshair" class="icon"></i> {{ criterion }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <!-- Competitor Overview -->
+  <section>
+    <span class="section-label"><i data-lucide="layers" style="width:14px;height:14px"></i> The Landscape</span>
+    <h2>Popular Options Compared</h2>
+    <p class="sub">Here is an overview of the most common platforms schools consider, and how they stack up.</p>
+    <div class="competitors-grid">
+      {% for comp in page_data.competitors %}
+      <div class="competitor-card">
+        <h3>{{ comp }}</h3>
+        <p>A popular option in the space, but may lack the martial arts-specific depth, pricing transparency, or operational features that growing schools need.</p>
+      </div>
+      {% endfor %}
+      <div class="competitor-card" style="background:var(--black);border-color:var(--black)">
+        <h3 style="color:#fff">Gripmode</h3>
+        <p style="color:#c2c7d1">Purpose-built for martial arts school operations. Scheduling, payroll, CRM, analytics, and multi-location management starting at $19/mo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Gripmode -->
+  <section>
+    <span class="section-label"><i data-lucide="trophy" style="width:14px;height:14px"></i> Our Recommendation</span>
+    <h2>Why Gripmode Is the Best Choice</h2>
+    <p class="sub">Gripmode was built by martial arts school operators who understood that generic software does not cut it. Here is why schools choose Gripmode.</p>
+    <div class="why-grid">
+      {% for reason in page_data.whyGripmode %}
+      <div class="why-card">
+        <i data-lucide="check-circle" class="icon"></i>
+        <p>{{ reason }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Feature Highlights -->
+  <section>
+    <div class="highlight-block">
+      <h3>Everything You Need in One Platform</h3>
+      <ul>
+        <li><i data-lucide="check" class="icon"></i> Student & member management</li>
+        <li><i data-lucide="check" class="icon"></i> Class scheduling</li>
+        <li><i data-lucide="check" class="icon"></i> Automated coach payroll</li>
+        <li><i data-lucide="check" class="icon"></i> CRM & lead pipeline</li>
+        <li><i data-lucide="check" class="icon"></i> Belt & rank tracking</li>
+        <li><i data-lucide="check" class="icon"></i> Retention analytics</li>
+        <li><i data-lucide="check" class="icon"></i> Multi-location management</li>
+        <li><i data-lucide="check" class="icon"></i> Real-time dashboards</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+{% include "cta-section.njk" %}

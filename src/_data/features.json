@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "crm-leads",
+    "title": "CRM & Lead Management",
+    "tagline": "Never lose a lead again. Track every prospect from first contact to first class.",
+    "icon": "users",
+    "metaDesc": "Gripmode CRM helps martial arts schools capture, nurture, and convert leads into paying members with automated follow-ups and pipeline tracking.",
+    "benefits": ["Capture leads from website, walk-ins, and referrals", "Automated follow-up sequences", "Visual pipeline with drag-and-drop stages", "Lead source tracking and ROI analysis", "Trial-to-member conversion tracking"],
+    "features": ["Lead capture forms", "Pipeline management", "Automated email follow-ups", "Lead source attribution", "Trial management", "Conversion analytics", "Contact history", "Bulk actions"],
+    "howItWorks": [
+      { "step": "Capture", "desc": "Leads flow in automatically from your website forms, walk-in check-ins, referral links, and social media campaigns. Every lead is tagged with its source so you always know what's working." },
+      { "step": "Nurture", "desc": "Automated email and SMS sequences engage new leads within minutes. Gripmode sends trial invitations, follow-ups after no-shows, and re-engagement messages — all without you lifting a finger." },
+      { "step": "Convert", "desc": "Your visual pipeline shows exactly where every prospect stands. Drag leads between stages, set reminders for personal follow-ups, and watch your conversion rate climb with real-time analytics." }
+    ],
+    "related": ["booking-system", "member-management", "analytics"]
+  },
+  {
+    "slug": "booking-system",
+    "title": "Online Booking",
+    "tagline": "Let students book classes, trials, and privates online — 24/7.",
+    "icon": "calendar-check",
+    "metaDesc": "Online booking system for martial arts schools. Let students book classes, trial sessions, and private lessons anytime.",
+    "benefits": ["24/7 online booking for classes and trials", "Automated confirmation and reminder emails", "Waitlist management for full classes", "Private lesson scheduling", "Integration with class schedule"],
+    "features": ["Class booking widget", "Trial class booking", "Private lesson scheduling", "Automated reminders", "Waitlist management", "Calendar sync", "Booking limits", "Walk-in check-in"],
+    "howItWorks": [
+      { "step": "Embed", "desc": "Add the Gripmode booking widget to your website or share a direct booking link. Prospective students see real-time availability and can book a trial or regular class in seconds." },
+      { "step": "Confirm", "desc": "Instant confirmation emails go out with class details, location, and what to bring. Automated reminders fire 24 hours and 1 hour before — dramatically reducing no-shows." },
+      { "step": "Check In", "desc": "Students check in via tablet kiosk, QR code, or front desk. Attendance is logged automatically, feeding into your retention analytics and coach payroll calculations." }
+    ],
+    "related": ["scheduling", "crm-leads", "member-management"]
+  },
+  {
+    "slug": "scheduling",
+    "title": "Class Scheduling",
+    "tagline": "Build, manage, and optimize your class schedule without the spreadsheet chaos.",
+    "icon": "calendar",
+    "metaDesc": "Smart class scheduling for martial arts schools. Weekly grid view, multi-coach assignment, schedule cloning, and conflict detection.",
+    "benefits": ["Visual weekly grid with drag-and-drop", "Multi-coach assignment per class", "Clone schedules week-to-week", "Automatic conflict detection", "Student capacity management"],
+    "features": ["Weekly schedule grid", "Multi-coach assignment", "Schedule cloning", "Conflict detection", "Capacity limits", "Recurring classes", "Substitute management", "Schedule publishing"],
+    "howItWorks": [
+      { "step": "Build", "desc": "Drag and drop classes onto a visual weekly grid. Set times, assign coaches, define capacity limits, and choose which belt levels can attend — all from one screen." },
+      { "step": "Assign", "desc": "Assign primary and assistant coaches to each class. Gripmode checks for scheduling conflicts automatically and alerts you if a coach is double-booked or unavailable." },
+      { "step": "Publish", "desc": "Hit publish and your schedule goes live on your website, booking widget, and student app. Clone the entire week forward and make adjustments as needed — no more rebuilding from scratch." }
+    ],
+    "related": ["booking-system", "payroll", "team-management"]
+  },
+  {
+    "slug": "payroll",
+    "title": "Automated Payroll",
+    "tagline": "Stop calculating coach pay manually. Gripmode handles class pay, privates, commissions, and salaries.",
+    "icon": "dollar-sign",
+    "metaDesc": "Automated payroll for martial arts schools. Calculate class pay, private lesson rates, commissions, and salaries automatically with period locking.",
+    "benefits": ["Automatic calculation from class attendance", "Multiple pay types: hourly, per-class, salary, commission", "Pay period locking to prevent retroactive changes", "Exportable payroll reports", "Full audit trail on every calculation"],
+    "features": ["Auto-calculated class pay", "Private lesson pay tracking", "Commission calculations", "Salary management", "Pay period locking", "Payroll reports", "Multi-rate support", "Audit trail"],
+    "howItWorks": [
+      { "step": "Configure", "desc": "Set pay rates for each coach: per-class flat fees, hourly rates, salary amounts, and commission percentages. Support different rates for different class types like kids programs vs. adult advanced." },
+      { "step": "Calculate", "desc": "As coaches teach classes and log private lessons, Gripmode calculates pay automatically based on actual attendance records. No spreadsheets, no manual counting, no mistakes." },
+      { "step": "Review & Lock", "desc": "Review the calculated payroll for any period, make adjustments if needed, then lock the period. Locked periods can't be altered retroactively, giving you a clean audit trail." }
+    ],
+    "related": ["scheduling", "team-management", "analytics"]
+  },
+  {
+    "slug": "events-tournaments",
+    "title": "Events & Tournaments",
+    "tagline": "Plan, promote, and run tournaments and events with built-in registration and bracket management.",
+    "icon": "trophy",
+    "metaDesc": "Tournament and event management for martial arts schools. Registration, bracket management, and results tracking in one platform.",
+    "benefits": ["Online event registration", "Bracket and division management", "Results and scoring tracking", "Event promotion tools", "Post-event analytics"],
+    "features": ["Event creation", "Online registration", "Division management", "Bracket generation", "Results tracking", "Spectator check-in", "Event analytics", "Multi-event calendar"],
+    "howItWorks": [
+      { "step": "Create", "desc": "Set up your event with dates, location, divisions, weight classes, and registration fees. Gripmode generates a professional event page with all the details participants need." },
+      { "step": "Register", "desc": "Students register online and are automatically sorted into the correct divisions based on their profile data — belt rank, age, weight class. No manual bracket building required." },
+      { "step": "Run", "desc": "On event day, manage brackets in real time. Record match results, track scores, and generate final standings. Post-event analytics show attendance, revenue, and participant feedback." }
+    ],
+    "related": ["member-management", "booking-system", "analytics"]
+  },
+  {
+    "slug": "analytics",
+    "title": "Analytics & Business Intelligence",
+    "tagline": "Real-time dashboards that show exactly how your school is performing — no spreadsheets required.",
+    "icon": "bar-chart-3",
+    "metaDesc": "Real-time analytics dashboard for martial arts schools. Track revenue, retention, attendance, and growth metrics across all locations.",
+    "benefits": ["Real-time revenue and member dashboards", "Retention and churn tracking", "Attendance trend analysis", "Per-location performance comparison", "Custom report builder"],
+    "features": ["Revenue dashboard", "Member growth tracking", "Retention analytics", "Attendance reports", "Churn analysis", "Per-location metrics", "Custom date ranges", "Export to CSV/PDF"],
+    "howItWorks": [
+      { "step": "Connect", "desc": "Your analytics dashboard is powered by real data from every part of Gripmode — memberships, attendance, payments, and more. No manual data entry or CSV imports needed." },
+      { "step": "Monitor", "desc": "Watch your key metrics update in real time. Revenue trends, member growth, retention rates, attendance patterns, and churn signals are all visualized in clean, actionable dashboards." },
+      { "step": "Act", "desc": "Drill into any metric to understand the why. Spot members at risk of churning before they leave. Compare location performance. Export reports for your accountant or business partner." }
+    ],
+    "related": ["dashboard", "member-management", "multi-location"]
+  },
+  {
+    "slug": "member-management",
+    "title": "Member Management",
+    "tagline": "One profile for every student. Attendance, payments, belt rank, notes — all in one place.",
+    "icon": "user-check",
+    "metaDesc": "Complete member management for martial arts schools. Track attendance, belt ranks, payments, and student history in unified profiles.",
+    "benefits": ["Unified student profiles with full history", "Belt rank and curriculum tracking", "Attendance and check-in records", "Payment and billing history", "Family account linking"],
+    "features": ["Student profiles", "Belt rank tracking", "Attendance history", "Payment records", "Family accounts", "Notes and tags", "Document storage", "Bulk member actions"],
+    "howItWorks": [
+      { "step": "Enroll", "desc": "Add new members with a streamlined enrollment form. Capture contact details, emergency info, belt rank, and membership plan. Students converted from your CRM carry over all their history." },
+      { "step": "Track", "desc": "Every interaction is logged automatically — class attendance, payments, belt promotions, notes from coaches, and communication history. One profile tells the complete story." },
+      { "step": "Manage", "desc": "Use tags, filters, and bulk actions to manage your roster efficiently. Link family accounts for easy billing. Set up automated alerts for attendance drops or expiring memberships." }
+    ],
+    "related": ["crm-leads", "booking-system", "analytics"]
+  },
+  {
+    "slug": "inventory",
+    "title": "Inventory System",
+    "tagline": "Track gis, equipment, and merchandise with real-time stock levels and low-stock alerts.",
+    "icon": "package",
+    "metaDesc": "Inventory management for martial arts schools. Track products, monitor stock levels, get low-stock alerts, and maintain a full audit trail.",
+    "benefits": ["Real-time stock tracking across locations", "Low-stock alerts before you run out", "Product catalog with variants (size, color)", "Sales and inventory reports", "Full audit trail on stock changes"],
+    "features": ["Product catalog", "Stock tracking", "Low-stock alerts", "Variant management", "Stock adjustments", "Inventory reports", "Supplier tracking", "Audit trail"],
+    "howItWorks": [
+      { "step": "Catalog", "desc": "Build your product catalog with items like gis, rash guards, belts, and equipment. Define variants for size and color, set reorder thresholds, and assign prices." },
+      { "step": "Track", "desc": "Stock levels update automatically as you sell or distribute items. Multi-location inventory stays in sync. Low-stock alerts fire before you run out of popular sizes." },
+      { "step": "Report", "desc": "See which products sell fastest, which sizes need restocking, and your total inventory value. Every stock change is logged with who made it and why — giving you a complete audit trail." }
+    ],
+    "related": ["multi-location", "analytics", "member-management"]
+  },
+  {
+    "slug": "multi-location",
+    "title": "Multi-Location Management",
+    "tagline": "Run 2 schools or 20 from one dashboard. Centralized control, per-location detail.",
+    "icon": "building-2",
+    "metaDesc": "Multi-location management for martial arts school chains. Centralized dashboard with per-location controls, reporting, and team management.",
+    "benefits": ["Single dashboard for all locations", "Per-location access controls", "Cross-location reporting and comparison", "Centralized member database", "Location-specific settings"],
+    "features": ["Centralized dashboard", "Per-location controls", "Cross-location reports", "Staff assignment by location", "Location-specific pricing", "Consolidated billing", "Inter-location transfers", "Location performance comparison"],
+    "howItWorks": [
+      { "step": "Add Locations", "desc": "Set up each location with its own schedule, staff, pricing, and settings. Each location operates independently day-to-day while rolling up to your centralized dashboard." },
+      { "step": "Control Access", "desc": "Assign staff to specific locations with role-based permissions. A coach at Location A only sees Location A. Owners and managers see everything across all locations." },
+      { "step": "Compare & Optimize", "desc": "Cross-location reports show which schools are outperforming and why. Compare retention rates, revenue per member, class utilization, and more — then replicate what works." }
+    ],
+    "related": ["team-management", "analytics", "dashboard"]
+  },
+  {
+    "slug": "team-management",
+    "title": "Team Management",
+    "tagline": "Manage coaches, front desk staff, and assistants with role-based access and performance tracking.",
+    "icon": "users",
+    "metaDesc": "Team management for martial arts schools. Role-based access, pay rate management, performance tracking, and location assignments.",
+    "benefits": ["Role-based access control (owner, coach, front desk)", "Individual pay rate management", "Performance and attendance tracking", "Location-specific assignments", "Coach availability scheduling"],
+    "features": ["Role-based permissions", "Pay rate management", "Performance metrics", "Location assignments", "Availability scheduling", "Coach profiles", "Commission tracking", "Team communication"],
+    "howItWorks": [
+      { "step": "Onboard", "desc": "Add team members with their role, pay rates, and location assignments. Each role comes with pre-configured permissions — coaches see their classes, front desk handles check-ins, owners see everything." },
+      { "step": "Schedule", "desc": "Coaches set their availability, and you assign them to classes accordingly. When a coach calls out, quickly find an available substitute from the same location." },
+      { "step": "Evaluate", "desc": "Track each team member's performance: classes taught, attendance rates in their classes, student retention, and private lesson bookings. Use data to reward top performers." }
+    ],
+    "related": ["payroll", "scheduling", "multi-location"]
+  },
+  {
+    "slug": "dashboard",
+    "title": "Operations Dashboard",
+    "tagline": "Your school's command center. Everything you need to know, updated in real time.",
+    "icon": "layout-dashboard",
+    "metaDesc": "Real-time operations dashboard for martial arts schools. Monitor members, revenue, attendance, and team performance at a glance.",
+    "benefits": ["At-a-glance school health metrics", "Today's schedule and check-ins", "Revenue and collection status", "Retention risk alerts", "Quick actions for common tasks"],
+    "features": ["KPI overview cards", "Today's schedule", "Check-in feed", "Revenue tracker", "Retention alerts", "Quick actions", "Multi-location switcher", "Customizable widgets"],
+    "howItWorks": [
+      { "step": "Open", "desc": "Your dashboard loads instantly with today's key metrics: active members, revenue this month, classes scheduled today, and any items that need your attention." },
+      { "step": "Monitor", "desc": "Watch the live check-in feed as students arrive. See today's class schedule with enrollment counts. Get alerted to retention risks, failed payments, and expiring memberships." },
+      { "step": "Act", "desc": "Quick-action buttons let you add a new member, send a message, adjust a schedule, or pull a report without navigating away. One dashboard, zero tab-switching." }
+    ],
+    "related": ["analytics", "scheduling", "member-management"]
+  }
+]

@@ -1,0 +1,45 @@
+# Gripmode
+
+> Gripmode is martial arts school management software that helps school owners run their operations with discipline — handling scheduling, payroll, member management, retention analytics, and more in one platform.
+
+## About
+- Company: Gripmode
+- Website: https://gripmode.app
+- Category: SaaS / Martial Arts School Management Software
+- Founded: 2025
+- Pricing: From $19/month
+
+## Core Features
+- CRM & Lead Management
+- Class Scheduling
+- Automated Payroll
+- Member Management
+- Analytics Dashboard
+- Retention Alerts
+- Inventory Management
+- Multi-Location Management
+- Team Management
+- Events & Tournaments
+- Online Booking
+- Operations Dashboard
+
+## Key Pages
+- Homepage: https://gripmode.app/
+- Features: https://gripmode.app/features/
+- Pricing: https://gripmode.app/pricing/
+- Blog: https://gripmode.app/blog/
+- About: https://gripmode.app/about/
+- Contact: https://gripmode.app/contact/
+
+## Use Cases
+- Martial Arts Schools: https://gripmode.app/use-cases/martial-arts-school-software/
+- BJJ Academies: https://gripmode.app/use-cases/bjj-school-management/
+- MMA Gyms: https://gripmode.app/use-cases/mma-gym-software/
+- Karate Schools: https://gripmode.app/use-cases/karate-school-management/
+- Taekwondo Schools: https://gripmode.app/use-cases/taekwondo-school-software/
+
+## Competitor Comparisons
+- vs Zen Planner: https://gripmode.app/compare/gripmode-vs-zen-planner/
+- vs Kicksite: https://gripmode.app/compare/gripmode-vs-kicksite/
+- vs PushPress: https://gripmode.app/compare/gripmode-vs-pushpress/
+- vs MindBody: https://gripmode.app/compare/gripmode-vs-mindbody/

@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "martial-arts-school-software",
+    "discipline": "Martial Arts",
+    "title": "Martial Arts School Management Software",
+    "metaDesc": "Complete management software for martial arts schools. Handle scheduling, payroll, member management, and analytics in one platform built for martial arts operators.",
+    "heroHeading": "The Operating System for Martial Arts Schools",
+    "heroSub": "Gripmode gives martial arts school owners complete operational control — from student management and scheduling to payroll and retention analytics.",
+    "painPoints": ["Juggling spreadsheets, paper sign-ins, and manual payroll", "No visibility into which students are at risk of leaving", "Spending hours on admin instead of teaching and growing", "Using generic gym software that doesn't understand martial arts"],
+    "benefits": ["Purpose-built for martial arts operations and terminology", "Belt rank and curriculum tracking across all disciplines", "Automated coach payroll with class-based calculations", "Retention analytics to catch at-risk students early", "Multi-location management for growing academies"],
+    "features": ["Student profiles with belt history", "Class scheduling with multi-coach support", "Automated payroll calculations", "Retention and churn analytics", "CRM and lead pipeline", "Inventory management for gis and equipment", "Tournament and event management"]
+  },
+  {
+    "slug": "bjj-school-management",
+    "discipline": "Brazilian Jiu-Jitsu",
+    "title": "BJJ School Management Software",
+    "metaDesc": "Management software built for BJJ academies. Track belt promotions, manage class schedules, automate coach payroll, and grow your BJJ school.",
+    "heroHeading": "Built for BJJ Academies",
+    "heroSub": "From white belt to black belt, Gripmode tracks every student's journey while giving you the operational tools to grow your academy.",
+    "painPoints": ["Tracking belt promotions and stripes across hundreds of students", "Managing multiple class types (gi, no-gi, competition, kids)", "Calculating pay for coaches teaching different class types", "Running tournaments and in-house competitions"],
+    "benefits": ["BJJ-specific belt and stripe tracking", "Class type management (gi, no-gi, competition, kids, fundamentals)", "Coach payroll calculated by class type and attendance", "Tournament bracket and registration management", "Student attendance and mat time tracking"],
+    "features": ["Belt promotion tracking with stripe system", "Gi and no-gi class management", "Competition team tracking", "Private lesson scheduling", "Student progression milestones", "Mat time analytics", "Competition results tracking"]
+  },
+  {
+    "slug": "mma-gym-software",
+    "discipline": "MMA",
+    "title": "MMA Gym Management Software",
+    "metaDesc": "Management software for MMA gyms. Handle multi-discipline scheduling, fighter management, coach payroll, and gym analytics.",
+    "heroHeading": "Run Your MMA Gym Like a Pro",
+    "heroSub": "MMA gyms are complex — multiple disciplines, varied schedules, different coach specialties. Gripmode handles it all from one dashboard.",
+    "painPoints": ["Scheduling across multiple disciplines (striking, wrestling, BJJ)", "Managing coaches with different specialties and pay rates", "Tracking students across multiple program types", "Balancing amateur and pro fighter schedules"],
+    "benefits": ["Multi-discipline class scheduling in one view", "Per-discipline coach assignments and pay rates", "Cross-training tracking for students in multiple programs", "Fighter management with bout history", "Equipment and bag inventory tracking"],
+    "features": ["Multi-discipline scheduling", "Cross-program student tracking", "Sparring and training logs", "Coach specialty management", "Equipment inventory", "Fighter profiles", "Event and fight card management"]
+  },
+  {
+    "slug": "karate-school-management",
+    "discipline": "Karate",
+    "title": "Karate School Management Software",
+    "metaDesc": "Management software for karate schools and dojos. Track belt ranks, manage kata curriculum, automate scheduling and payroll.",
+    "heroHeading": "Modern Software for Traditional Karate Schools",
+    "heroSub": "Honor the tradition of your dojo while running it with modern operational discipline. Gripmode handles the business side so you can focus on teaching.",
+    "painPoints": ["Tracking kyu and dan ranks across large student bodies", "Managing kata curriculum and testing requirements", "Coordinating children's and adult class schedules", "Handling seasonal enrollment fluctuations"],
+    "benefits": ["Complete kyu/dan belt rank tracking", "Kata and curriculum milestone tracking", "Age-group class management (kids, teens, adults)", "Seasonal enrollment and retention analytics", "Testing and grading event management"],
+    "features": ["Kyu/dan rank tracking", "Kata curriculum management", "Grading event scheduling", "Age-group class management", "Family account management", "Seasonal analytics", "Dojo etiquette documentation"]
+  },
+  {
+    "slug": "taekwondo-school-software",
+    "discipline": "Taekwondo",
+    "title": "Taekwondo School Management Software",
+    "metaDesc": "Management software for Taekwondo schools. Track belt ranks, manage poomsae curriculum, handle tournament registration and school operations.",
+    "heroHeading": "Powerful Software for Taekwondo Schools",
+    "heroSub": "Manage your Taekwondo school with the same discipline you teach your students. Belt tracking, scheduling, payroll, and analytics — all in one platform.",
+    "painPoints": ["Tracking colored belt ranks and dan levels", "Managing poomsae and testing requirements", "Coordinating competition teams and tournament registration", "Handling family accounts with multiple children"],
+    "benefits": ["Complete Taekwondo belt rank system tracking", "Poomsae and testing curriculum management", "Tournament registration and team management", "Family-friendly account management", "After-school program scheduling"],
+    "features": ["Belt rank tracking (10th gup to 9th dan)", "Poomsae curriculum tracking", "Tournament team management", "After-school program management", "Family accounts", "Testing event coordination", "Board breaking records"]
+  },
+  {
+    "slug": "kickboxing-gym-management",
+    "discipline": "Kickboxing",
+    "title": "Kickboxing Gym Management Software",
+    "metaDesc": "Management software for kickboxing gyms. Handle class scheduling, member management, coach payroll, and fitness tracking.",
+    "heroHeading": "Streamline Your Kickboxing Gym Operations",
+    "heroSub": "Whether you run fitness kickboxing classes or train competitive fighters, Gripmode gives you the tools to manage and grow your gym.",
+    "painPoints": ["Managing high-volume class schedules with varying formats", "Tracking drop-in vs membership students", "Handling peak-hour capacity management", "Coordinating group fitness and competitive training schedules"],
+    "benefits": ["High-volume class scheduling with capacity limits", "Flexible membership and drop-in tracking", "Peak hour analytics and capacity management", "Coach schedule and pay automation", "Retention tools for high-churn fitness classes"],
+    "features": ["Class capacity management", "Drop-in tracking", "Membership management", "Peak hour analytics", "Coach scheduling", "Fitness tracking integration", "Waitlist management"]
+  },
+  {
+    "slug": "judo-club-software",
+    "discipline": "Judo",
+    "title": "Judo Club Management Software",
+    "metaDesc": "Management software for judo clubs. Track kyu/dan ranks, manage competition entries, handle club operations and coaching schedules.",
+    "heroHeading": "Software Built for Judo Clubs",
+    "heroSub": "From recreational judoka to Olympic hopefuls, manage your entire club with purpose-built operational tools.",
+    "painPoints": ["Tracking kyu and dan grades across age groups", "Managing national federation registration requirements", "Coordinating competition entries and results", "Handling club-based coaching volunteer schedules"],
+    "benefits": ["Kyu/dan grade tracking aligned with federation standards", "Competition entry and results management", "Club membership and federation reporting", "Volunteer coach scheduling", "Junior and senior program management"],
+    "features": ["Kyu/dan grading system", "Competition management", "Federation reporting", "Volunteer scheduling", "Junior program tracking", "Randori partner matching", "Club event management"]
+  },
+  {
+    "slug": "wrestling-club-management",
+    "discipline": "Wrestling",
+    "title": "Wrestling Club Management Software",
+    "metaDesc": "Management software for wrestling clubs and programs. Handle practice scheduling, tournament registration, weight tracking, and club operations.",
+    "heroHeading": "Run Your Wrestling Program with Precision",
+    "heroSub": "Wrestling programs need structure. Gripmode gives coaches and club directors the operational tools to manage practices, tournaments, and team development.",
+    "painPoints": ["Managing seasonal practice schedules", "Coordinating tournament registration across weight classes", "Tracking wrestler development and match records", "Handling dual-sport athletes and flexible schedules"],
+    "benefits": ["Season-based practice scheduling", "Tournament registration by weight class", "Wrestler development tracking and match records", "Flexible scheduling for dual-sport athletes", "Team and individual performance analytics"],
+    "features": ["Practice scheduling", "Tournament registration", "Weight class management", "Match record tracking", "Season planning", "Dual-sport scheduling", "Performance analytics"]
+  }
+]

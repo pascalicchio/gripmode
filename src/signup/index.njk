@@ -1,0 +1,188 @@
+---
+layout: layout.njk
+title: "Start Your Free Trial — Gripmode"
+metaDesc: "Create your Gripmode account and get full access in minutes. 7-day free trial, no credit card required."
+bodyClass: "signup-page"
+---
+
+{% block extraHead %}
+<style>
+  .signup-page main { background: #0f1114; min-height: calc(100vh - 78px); }
+</style>
+{% endblock %}
+
+<div style="display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 78px)" class="signup-layout">
+
+  <!-- Left: value props -->
+  <div style="padding:80px 64px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,0.08)">
+    <a href="/" style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;text-decoration:none;letter-spacing:.2px;margin-bottom:56px;display:inline-block">GRIPMODE</a>
+
+    <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);font-size:.78rem;font-weight:700;color:#aaa;letter-spacing:.06em;margin-bottom:24px;width:fit-content">7-DAY FREE TRIAL</div>
+
+    <h1 style="font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin-bottom:20px;line-height:1.1">Your school.<br>Under control.</h1>
+    <p style="color:#888;font-size:1.05rem;line-height:1.7;max-width:42ch;margin-bottom:48px">Join martial arts school owners using Gripmode to run operations with discipline — scheduling, payroll, retention, and analytics in one place.</p>
+
+    <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px">
+      <li style="display:flex;align-items:center;gap:14px">
+        <div style="width:32px;height:32px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <i data-lucide="zap" style="width:16px;height:16px;color:#fff"></i>
+        </div>
+        <span style="color:#ccc;font-size:.95rem">Up and running in <strong style="color:#fff">under 5 minutes</strong></span>
+      </li>
+      <li style="display:flex;align-items:center;gap:14px">
+        <div style="width:32px;height:32px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <i data-lucide="credit-card" style="width:16px;height:16px;color:#fff"></i>
+        </div>
+        <span style="color:#ccc;font-size:.95rem"><strong style="color:#fff">No credit card</strong> required to start</span>
+      </li>
+      <li style="display:flex;align-items:center;gap:14px">
+        <div style="width:32px;height:32px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <i data-lucide="shield-check" style="width:16px;height:16px;color:#fff"></i>
+        </div>
+        <span style="color:#ccc;font-size:.95rem">Full access to <strong style="color:#fff">all features</strong> during trial</span>
+      </li>
+      <li style="display:flex;align-items:center;gap:14px">
+        <div style="width:32px;height:32px;background:rgba(255,255,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <i data-lucide="x" style="width:16px;height:16px;color:#fff"></i>
+        </div>
+        <span style="color:#ccc;font-size:.95rem">Cancel anytime, <strong style="color:#fff">no questions asked</strong></span>
+      </li>
+    </ul>
+
+    <div style="margin-top:56px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08)">
+      <p style="color:#555;font-size:.8rem;margin-bottom:16px;text-transform:uppercase;letter-spacing:.08em;font-weight:700">Trusted by operators running</p>
+      <div style="display:flex;gap:32px;align-items:center">
+        <div style="text-align:center">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;color:#fff">50%</div>
+          <div style="font-size:.78rem;color:#666;margin-top:2px">Less cost than<br>legacy software</div>
+        </div>
+        <div style="width:1px;height:40px;background:rgba(255,255,255,0.08)"></div>
+        <div style="text-align:center">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;color:#fff">10h+</div>
+          <div style="font-size:.78rem;color:#666;margin-top:2px">Admin saved<br>per week</div>
+        </div>
+        <div style="width:1px;height:40px;background:rgba(255,255,255,0.08)"></div>
+        <div style="text-align:center">
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;color:#fff">5 min</div>
+          <div style="font-size:.78rem;color:#666;margin-top:2px">Average<br>setup time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: signup form -->
+  <div style="padding:80px 64px;display:flex;flex-direction:column;justify-content:center;background:#0a0c0e">
+    <div style="max-width:420px;width:100%">
+      <h2 style="color:#fff;font-size:1.7rem;margin-bottom:8px">Create your account</h2>
+      <p style="color:#666;margin-bottom:36px;font-size:.95rem">Start your 7-day free trial. No credit card needed.</p>
+
+      <form id="signupPageForm" novalidate>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div>
+            <label style="display:block;color:#888;font-size:.82rem;font-weight:600;margin-bottom:6px;letter-spacing:.04em">FULL NAME</label>
+            <input type="text" name="name" placeholder="Marcus Rodriguez" required autocomplete="name"
+              style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #262a30;background:#111518;color:#fff;font:inherit;font-size:.95rem;transition:border-color .15s,background .15s;outline:none"
+              onfocus="this.style.borderColor='#fff';this.style.background='#fff';this.style.color='#0f1114'"
+              onblur="this.style.borderColor='#262a30';this.style.background='#111518';this.style.color='#fff'">
+          </div>
+          <div>
+            <label style="display:block;color:#888;font-size:.82rem;font-weight:600;margin-bottom:6px;letter-spacing:.04em">WORK EMAIL</label>
+            <input type="email" name="email" placeholder="you@yourschool.com" required autocomplete="email"
+              style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #262a30;background:#111518;color:#fff;font:inherit;font-size:.95rem;transition:border-color .15s,background .15s;outline:none"
+              onfocus="this.style.borderColor='#fff';this.style.background='#fff';this.style.color='#0f1114'"
+              onblur="this.style.borderColor='#262a30';this.style.background='#111518';this.style.color='#fff'">
+          </div>
+          <div>
+            <label style="display:block;color:#888;font-size:.82rem;font-weight:600;margin-bottom:6px;letter-spacing:.04em">SCHOOL NAME</label>
+            <input type="text" name="gym_name" placeholder="Alliance BJJ Orlando" required
+              style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #262a30;background:#111518;color:#fff;font:inherit;font-size:.95rem;transition:border-color .15s,background .15s;outline:none"
+              onfocus="this.style.borderColor='#fff';this.style.background='#fff';this.style.color='#0f1114'"
+              onblur="this.style.borderColor='#262a30';this.style.background='#111518';this.style.color='#fff'">
+          </div>
+          <div>
+            <label style="display:block;color:#888;font-size:.82rem;font-weight:600;margin-bottom:6px;letter-spacing:.04em">PASSWORD</label>
+            <input type="password" name="password" placeholder="8+ characters" required minlength="8" autocomplete="new-password"
+              style="width:100%;padding:14px 16px;border-radius:10px;border:1px solid #262a30;background:#111518;color:#fff;font:inherit;font-size:.95rem;transition:border-color .15s,background .15s;outline:none"
+              onfocus="this.style.borderColor='#fff';this.style.background='#fff';this.style.color='#0f1114'"
+              onblur="this.style.borderColor='#262a30';this.style.background='#111518';this.style.color='#fff'">
+          </div>
+
+          <p id="signupPageError" style="display:none;color:#f87171;font-size:.85rem;margin:0"></p>
+
+          <button type="submit" id="signupPageBtn"
+            style="width:100%;padding:16px;border-radius:10px;background:#fff;color:#0f1114;font:inherit;font-weight:700;font-size:1rem;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s;margin-top:4px">
+            Start Free Trial <span id="signupPageArrow">→</span>
+          </button>
+        </div>
+      </form>
+
+      <p style="color:#444;font-size:.78rem;margin-top:20px;line-height:1.6;text-align:center">
+        By signing up you agree to our <a href="/terms/" style="color:#666;text-decoration:underline">Terms</a> and <a href="/privacy-policy/" style="color:#666;text-decoration:underline">Privacy Policy</a>.
+      </p>
+
+      <p style="color:#555;font-size:.88rem;margin-top:28px;text-align:center">
+        Already have an account? <a href="https://gripmode.test/login" style="color:#fff;font-weight:600;text-decoration:none" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Log in →</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 900px) {
+    .signup-layout { grid-template-columns: 1fr !important; }
+    .signup-layout > div:first-child { display: none !important; }
+    .signup-layout > div:last-child { padding: 48px 28px !important; min-height: calc(100vh - 78px); }
+    .signup-layout > div:last-child > div { max-width: 100% !important; }
+  }
+</style>
+
+<script>
+(function() {
+  const form = document.getElementById('signupPageForm');
+  const btn = document.getElementById('signupPageBtn');
+  const arrow = document.getElementById('signupPageArrow');
+  const errorEl = document.getElementById('signupPageError');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    arrow.textContent = '...';
+    errorEl.style.display = 'none';
+
+    const data = {
+      name: form.querySelector('[name="name"]').value.trim(),
+      email: form.querySelector('[name="email"]').value.trim(),
+      gym_name: form.querySelector('[name="gym_name"]').value.trim(),
+      password: form.querySelector('[name="password"]').value,
+    };
+
+    try {
+      const res = await fetch('https://dash.gripmode.app/api/v1/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        window.location.href = 'https://dash.gripmode.app' + (json.redirect || '/');
+      } else {
+        const msg = json.message || (json.errors ? Object.values(json.errors).flat().join(' ') : 'Something went wrong. Please try again.');
+        errorEl.textContent = msg;
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        arrow.textContent = '→';
+      }
+    } catch (err) {
+      errorEl.textContent = 'Unable to connect. Please try again.';
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      arrow.textContent = '→';
+    }
+  });
+})();
+</script>

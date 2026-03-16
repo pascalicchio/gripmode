@@ -1,0 +1,95 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+buildDate: "2026-01-01"
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  {# ── Static pages from allPages (excludes paginated templates) ── #}
+  {%- for page in collections.allPages -%}
+  {%- if page.url and not page.url.startsWith('/features/') and not page.url.startsWith('/compare/') and not page.url.startsWith('/use-cases/') and not page.url.startsWith('/best-for/') and not page.url.startsWith('/blog/') -%}
+  <url>
+    <loc>https://gripmode.app{{ page.url }}</loc>
+    <lastmod>{{ page.date | isoDate }}</lastmod>
+  </url>
+  {%- endif -%}
+  {%- endfor %}
+
+  {# ── Blog listing (paginated) ── #}
+  <url>
+    <loc>https://gripmode.app/blog/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- for i in range(2, sitemapBlog.totalPages + 1) -%}
+  <url>
+    <loc>https://gripmode.app/blog/page/{{ i }}/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- endfor %}
+
+  {# ── Blog posts ── #}
+  {%- for post in sitemapBlog.posts -%}
+  <url>
+    <loc>https://gripmode.app{{ post.url }}</loc>
+    <lastmod>{{ post.publishDate | isoDate }}</lastmod>
+  </url>
+  {%- endfor %}
+
+  {# ── Blog category pages ── #}
+  {%- for catSlug in sitemapBlog.categories -%}
+  <url>
+    <loc>https://gripmode.app/blog/category/{{ catSlug }}/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- endfor %}
+
+  {# ── Feature pages ── #}
+  <url>
+    <loc>https://gripmode.app/features/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- for feature in features -%}
+  <url>
+    <loc>https://gripmode.app/features/{{ feature.slug }}/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- endfor %}
+
+  {# ── Competitor comparison pages ── #}
+  <url>
+    <loc>https://gripmode.app/compare/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- for competitor in competitors -%}
+  <url>
+    <loc>https://gripmode.app/compare/gripmode-vs-{{ competitor.slug }}/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- endfor %}
+
+  {# ── Use-case pages ── #}
+  <url>
+    <loc>https://gripmode.app/use-cases/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- for useCase in useCases -%}
+  <url>
+    <loc>https://gripmode.app/use-cases/{{ useCase.slug }}/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- endfor %}
+
+  {# ── Best-for pages ── #}
+  <url>
+    <loc>https://gripmode.app/best-for/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- for page in bestFor -%}
+  <url>
+    <loc>https://gripmode.app/best-for/{{ page.slug }}/</loc>
+    <lastmod>2026-01-01</lastmod>
+  </url>
+  {%- endfor %}
+
+</urlset>

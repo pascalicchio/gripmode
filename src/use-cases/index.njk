@@ -1,0 +1,117 @@
+---
+layout: layout.njk
+pagination:
+  data: useCases
+  size: 1
+  alias: useCase
+permalink: "/use-cases/{{ useCase.slug }}/"
+eleventyComputed:
+  title: "{{ useCase.title }} — Gripmode"
+  metaDesc: "{{ useCase.metaDesc }}"
+  breadcrumbs:
+    - { name: "Home", url: "/" }
+    - { name: "Use Cases", url: "/use-cases/" }
+    - { name: "{{ useCase.title }}", url: "/use-cases/{{ useCase.slug }}/" }
+---
+
+{% block extraHead %}
+<style>
+  :root{
+    --bg:#ffffff;--bg-soft:#f7f8fa;--text:#0f1115;--muted:#5f6672;--line:#e5e7eb;--black:#111315;--radius:16px;
+  }
+  section{padding:88px 0}
+  .uc-hero{padding:96px 0 64px;max-width:760px}
+  .uc-hero .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:24px}
+  .sub{font-size:1.14rem;color:var(--muted);max-width:64ch;line-height:1.7}
+
+  .section-label{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:20px}
+
+  .pain-points{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+  .pain-card{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;align-items:start;gap:14px}
+  .pain-card .icon{width:20px;height:20px;stroke-width:2.1;flex-shrink:0;margin-top:2px;color:#dc2626}
+  .pain-card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.6}
+
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .benefit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .2s,box-shadow .2s}
+  .benefit-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+  .benefit-card .icon{width:20px;height:20px;stroke-width:2.1;margin-bottom:10px;color:var(--black)}
+  .benefit-card p{color:var(--muted);font-size:.93rem;margin:0;line-height:1.6}
+
+  .features-list{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  .features-list li{padding:16px 20px;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--text);display:flex;align-items:center;gap:12px;font-weight:500}
+  .features-list li .icon{width:18px;height:18px;stroke-width:2.1;color:#16a34a;flex-shrink:0}
+
+  @media (max-width:980px){
+    section{padding:66px 0}
+    .uc-hero{padding:72px 0 48px}
+    .pain-points,.benefits-grid,.features-list{grid-template-columns:1fr}
+  }
+</style>
+{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ useCase.title }}",
+  "description": "{{ useCase.metaDesc }}",
+  "url": "https://gripmode.app/use-cases/{{ useCase.slug }}/"
+}
+</script>
+{% endblock %}
+
+<div class="gm-container">
+
+  <!-- Hero -->
+  <section class="uc-hero">
+    <span class="eyebrow"><i data-lucide="target" style="width:16px;height:16px"></i> {{ useCase.discipline }}</span>
+    <h1>{{ useCase.heroHeading }}</h1>
+    <p class="sub">{{ useCase.heroSub }}</p>
+  </section>
+
+  <!-- Pain Points -->
+  <section style="padding-top:0">
+    <span class="section-label"><i data-lucide="alert-triangle" style="width:14px;height:14px"></i> Common Challenges</span>
+    <h2>Problems {{ useCase.discipline }} School Owners Face</h2>
+    <p class="sub">If any of these sound familiar, you are not alone. These are the operational challenges that Gripmode was built to solve.</p>
+    <div class="pain-points">
+      {% for pain in useCase.painPoints %}
+      <div class="pain-card">
+        <i data-lucide="x-circle" class="icon"></i>
+        <p>{{ pain }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section>
+    <span class="section-label"><i data-lucide="sparkles" style="width:14px;height:14px"></i> How Gripmode Helps</span>
+    <h2>Built for {{ useCase.discipline }} Operations</h2>
+    <p class="sub">Gripmode is not a generic fitness platform. Every feature is designed around how {{ useCase.discipline | lower }} schools actually operate day to day.</p>
+    <div class="benefits-grid">
+      {% for benefit in useCase.benefits %}
+      <div class="benefit-card">
+        <i data-lucide="check-circle" class="icon"></i>
+        <p>{{ benefit }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <span class="section-label"><i data-lucide="layout-grid" style="width:14px;height:14px"></i> Key Features</span>
+    <h2>Features for {{ useCase.discipline }} Schools</h2>
+    <p class="sub">Everything you need to run your {{ useCase.discipline | lower }} school — scheduling, member management, payroll, and analytics in one platform.</p>
+    <ul class="features-list">
+      {% for feature in useCase.features %}
+      <li><i data-lucide="check" class="icon"></i> {{ feature }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</div>
+
+{% include "cta-section.njk" %}

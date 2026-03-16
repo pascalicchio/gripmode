@@ -1,0 +1,270 @@
+---
+layout: layout.njk
+pagination:
+  data: competitors
+  size: 1
+  alias: competitor
+permalink: "/compare/gripmode-vs-{{ competitor.slug }}/"
+eleventyComputed:
+  title: "Gripmode vs {{ competitor.name }} — Martial Arts School Software Comparison"
+  metaDesc: "Compare Gripmode vs {{ competitor.name }} for martial arts school management. See pricing, features, and why schools switch to Gripmode."
+  breadcrumbs:
+    - { name: "Home", url: "/" }
+    - { name: "Compare", url: "/compare/" }
+    - { name: "Gripmode vs {{ competitor.name }}", url: "/compare/gripmode-vs-{{ competitor.slug }}/" }
+---
+
+{% block extraHead %}
+<style>
+  :root{
+    --bg:#ffffff;--bg-soft:#f7f8fa;--text:#0f1115;--muted:#5f6672;--line:#e5e7eb;--black:#111315;--radius:16px;
+  }
+  section{padding:88px 0}
+  .compare-hero{padding:96px 0 64px}
+  .compare-hero .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:24px}
+  .sub{font-size:1.14rem;color:var(--muted);max-width:64ch;line-height:1.7}
+
+  .compare-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:.95rem}
+  .compare-table th,.compare-table td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line)}
+  .compare-table th{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--bg-soft)}
+  .compare-table td:first-child{font-weight:600;color:var(--text);width:200px}
+  .compare-table td:nth-child(2){color:var(--black);font-weight:600}
+  .compare-table td:nth-child(3){color:var(--muted)}
+  .compare-table tr:last-child td{border-bottom:none}
+
+  .section-label{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:20px}
+  .advantages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .advantage-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .2s,box-shadow .2s}
+  .advantage-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+  .advantage-card .icon{width:20px;height:20px;stroke-width:2.1;margin-bottom:10px;color:var(--black)}
+  .advantage-card p{color:var(--muted);font-size:.93rem;margin:0;line-height:1.6}
+
+  .strengths-weaknesses{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+  .sw-card{border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .sw-card h3{font-family:"Space Grotesk",sans-serif;font-size:1.15rem;margin-bottom:16px}
+  .sw-card ul{list-style:none;padding:0;margin:0}
+  .sw-card ul li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:.95rem;display:flex;align-items:center;gap:10px}
+  .sw-card ul li:last-child{border-bottom:none}
+  .sw-card ul li .icon{width:16px;height:16px;flex-shrink:0}
+
+  .feature-grid{width:100%;border-collapse:collapse;margin-top:24px;font-size:.93rem}
+  .feature-grid th,.feature-grid td{padding:14px 20px;text-align:left;border-bottom:1px solid var(--line)}
+  .feature-grid th{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:.83rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--bg-soft)}
+  .feature-grid td:first-child{font-weight:500;color:var(--text)}
+  .feature-grid .yes{color:#16a34a;font-weight:600}
+  .feature-grid .no{color:#dc2626;font-weight:600}
+  .feature-grid .partial{color:#d97706;font-weight:600}
+
+  @media (max-width:980px){
+    section{padding:66px 0}
+    .compare-hero{padding:72px 0 48px}
+    .advantages-grid{grid-template-columns:1fr}
+    .strengths-weaknesses{grid-template-columns:1fr}
+    .compare-table,.feature-grid{display:block;overflow-x:auto}
+  }
+</style>
+{% endblock %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Gripmode vs {{ competitor.name }}",
+  "description": "Compare Gripmode vs {{ competitor.name }} for martial arts school management.",
+  "url": "https://gripmode.app/compare/gripmode-vs-{{ competitor.slug }}/"
+}
+</script>
+{% endblock %}
+
+<div class="gm-container">
+
+  <!-- Hero -->
+  <section class="compare-hero">
+    <span class="eyebrow"><i data-lucide="git-compare" style="width:16px;height:16px"></i> Software Comparison</span>
+    <h1>Gripmode vs {{ competitor.name }}</h1>
+    <p class="sub">{{ competitor.description }} See how Gripmode compares and why martial arts schools are making the switch.</p>
+  </section>
+
+  <!-- Quick Comparison Table -->
+  <section style="padding-top:0">
+    <span class="section-label"><i data-lucide="table-2" style="width:14px;height:14px"></i> Quick Comparison</span>
+    <h2>Side-by-Side Overview</h2>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Gripmode</th>
+          <th>{{ competitor.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Starting Price</td>
+          <td>From $19/mo</td>
+          <td>{{ competitor.pricing }}</td>
+        </tr>
+        <tr>
+          <td>Focus</td>
+          <td>Martial arts schools</td>
+          <td>{{ competitor.focus }}</td>
+        </tr>
+        <tr>
+          <td>Setup Time</td>
+          <td>5 minutes</td>
+          <td>Days to weeks</td>
+        </tr>
+        <tr>
+          <td>Belt/Rank Tracking</td>
+          <td>Built-in</td>
+          <td>{% if competitor.slug == "kicksite" or competitor.slug == "martialgym" %}Basic{% else %}No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Automated Payroll</td>
+          <td>Included</td>
+          <td>{% if competitor.slug == "zen-planner" %}Limited{% else %}No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Retention Analytics</td>
+          <td>Advanced</td>
+          <td>{% if competitor.slug == "mindbody" or competitor.slug == "zen-planner" %}Basic{% else %}Minimal{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Multi-Location</td>
+          <td>Included</td>
+          <td>{% if competitor.slug == "mindbody" or competitor.slug == "zen-planner" or competitor.slug == "glofox" %}Extra cost{% else %}No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Contract Required</td>
+          <td>No</td>
+          <td>{% if competitor.slug == "mindbody" or competitor.slug == "glofox" %}Yes{% else %}Varies{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Founded</td>
+          <td>2024</td>
+          <td>{{ competitor.founded }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Why Schools Switch -->
+  <section>
+    <span class="section-label"><i data-lucide="arrow-right-circle" style="width:14px;height:14px"></i> Why Schools Switch</span>
+    <h2>Why Schools Switch from {{ competitor.name }} to Gripmode</h2>
+    <p class="sub">Martial arts school owners need tools built for their specific workflows. Here is what Gripmode delivers that {{ competitor.name }} does not.</p>
+    <div class="advantages-grid">
+      {% for advantage in competitor.gripmodeAdvantages %}
+      <div class="advantage-card">
+        <i data-lucide="check-circle" class="icon"></i>
+        <p>{{ advantage }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Strengths & Weaknesses -->
+  <section>
+    <span class="section-label"><i data-lucide="scale" style="width:14px;height:14px"></i> Fair Assessment</span>
+    <h2>{{ competitor.name }}: Strengths and Weaknesses</h2>
+    <p class="sub">We believe in honest comparisons. Here is a balanced look at what {{ competitor.name }} does well and where it falls short for martial arts schools.</p>
+    <div class="strengths-weaknesses">
+      <div class="sw-card" style="background:#f0fdf4">
+        <h3 style="color:#16a34a">{{ competitor.name }} Strengths</h3>
+        <ul>
+          {% for strength in competitor.strengths %}
+          <li><i data-lucide="check" class="icon" style="color:#16a34a"></i> {{ strength }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="sw-card" style="background:#fef2f2">
+        <h3 style="color:#dc2626">{{ competitor.name }} Weaknesses</h3>
+        <ul>
+          {% for weakness in competitor.weaknesses %}
+          <li><i data-lucide="x" class="icon" style="color:#dc2626"></i> {{ weakness }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature-by-Feature Comparison -->
+  <section>
+    <span class="section-label"><i data-lucide="list-checks" style="width:14px;height:14px"></i> Feature Comparison</span>
+    <h2>Feature-by-Feature Comparison</h2>
+    <table class="feature-grid">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Gripmode</th>
+          <th>{{ competitor.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Student/Member Management</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>Class Scheduling</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>Belt & Rank Tracking</td>
+          <td class="yes">Yes</td>
+          <td class="{% if competitor.slug == 'kicksite' or competitor.slug == 'martialgym' %}partial">Partial{% else %}no">No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Automated Coach Payroll</td>
+          <td class="yes">Yes</td>
+          <td class="no">No</td>
+        </tr>
+        <tr>
+          <td>CRM & Lead Pipeline</td>
+          <td class="yes">Yes</td>
+          <td class="{% if competitor.slug == 'kicksite' or competitor.slug == 'zen-planner' or competitor.slug == 'mindbody' %}partial">Basic{% else %}no">No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Retention Analytics</td>
+          <td class="yes">Yes</td>
+          <td class="{% if competitor.slug == 'mindbody' or competitor.slug == 'zen-planner' %}partial">Basic{% else %}no">No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Multi-Location Management</td>
+          <td class="yes">Yes</td>
+          <td class="{% if competitor.slug == 'mindbody' or competitor.slug == 'zen-planner' or competitor.slug == 'glofox' %}partial">Extra Cost{% else %}no">No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Tournament Management</td>
+          <td class="yes">Yes</td>
+          <td class="no">No</td>
+        </tr>
+        <tr>
+          <td>Inventory Tracking</td>
+          <td class="yes">Yes</td>
+          <td class="{% if competitor.slug == 'mindbody' %}partial">Basic{% else %}no">No{% endif %}</td>
+        </tr>
+        <tr>
+          <td>Payment Processing</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>Mobile Access</td>
+          <td class="yes">Yes</td>
+          <td class="yes">Yes</td>
+        </tr>
+        <tr>
+          <td>Real-Time Dashboard</td>
+          <td class="yes">Yes</td>
+          <td class="{% if competitor.slug == 'mindbody' or competitor.slug == 'glofox' %}partial">Basic{% else %}no">No{% endif %}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+{% include "cta-section.njk" %}

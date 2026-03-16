@@ -1,0 +1,385 @@
+---
+layout: layout.njk
+title: "Gripmode — Lead Strong. Run Smart."
+metaDesc: "Operational system for martial arts schools: retention, reporting, and execution in one disciplined workflow. 7-day free trial."
+---
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Gripmode",
+  "url": "https://gripmode.app",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Martial arts school management software — retention, payroll, scheduling, and operations in one platform.",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Starter",
+      "price": "19.00",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2027-12-31"
+    },
+    {
+      "@type": "Offer",
+      "name": "Growth",
+      "price": "39.00",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2027-12-31"
+    },
+    {
+      "@type": "Offer",
+      "name": "Multi-Location",
+      "price": "79.00",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2027-12-31"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this generic gym software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Gripmode is purpose-built for martial arts school operations — not generic gyms, CrossFit boxes, or yoga studios."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel during the trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can cancel anytime during the 7-day trial window with no charge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer data import?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We can import your existing member and schedule data to get you running quickly."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block extraHead %}
+<style>
+  :root{
+    --bg:#ffffff;--bg-soft:#f7f8fa;--text:#0f1115;--muted:#5f6672;--line:#e5e7eb;--black:#111315;--radius:16px;--dark-bg:#0f1114;
+  }
+  section{padding:88px 0}
+  .hero{padding:96px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:#f4f4f5;border:1px solid var(--line);font-size:.83rem;font-weight:700;margin-bottom:24px}
+  .sub{font-size:1.14rem;color:var(--muted);max-width:60ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;border:1px solid transparent;text-decoration:none;font-weight:700;cursor:pointer}
+  .btn-dark{background:var(--black);color:#fff}.btn-dark:hover{opacity:.92}
+  .btn-light{background:#fff;color:#111;border-color:var(--line)}
+  .panel{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .panel-header{font-family:"Space Grotesk";font-size:1.35rem;font-weight:700;margin-bottom:8px}
+  .panel-sub{color:var(--muted);margin-bottom:20px;font-size:.95rem}
+  .mini-grid{display:grid;grid-template-columns:1fr;gap:10px}
+  .mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px;transition:transform .2s,box-shadow .2s}
+  .mini:hover{transform:translateX(6px);box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+  .mini-icon{width:42px;height:42px;background:var(--black);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .mini-icon i{color:#fff;width:20px;height:20px}
+  .mini-content{flex:1}
+  .mini strong{display:block;font-weight:700;font-size:.98rem}
+  .mini span{color:var(--muted);font-size:.85rem}
+  .section-intro{max-width:760px;color:var(--muted);font-size:1.04rem;margin-bottom:28px}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .icon{width:22px;height:22px;stroke-width:2.1;margin-bottom:12px}
+  .value-prop-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:transform .2s,box-shadow .2s}
+  .value-prop-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.08)}
+  .value-prop-card .value-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .value-prop-card .value-icon{width:36px;height:36px;background:var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center}
+  .value-prop-card .value-icon i{color:#fff;width:18px;height:18px}
+  .value-prop-card .value{font-family:"Space Grotesk";font-size:1.6rem;font-weight:700}
+  .value-prop-card .label{font-weight:700;font-size:.95rem;margin-bottom:6px}
+  .value-prop-card p{color:var(--muted);font-size:.9rem;margin:0}
+  .features-dark{background:var(--dark-bg);color:#fff;padding:88px 0;width:100%;position:relative}
+  .features-dark .section-intro{color:#888}
+  .features-dark h2{color:#fff}
+  .feature-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:24px;transition:transform .2s,background .2s}
+  .features-dark .feature-card:hover{transform:translateY(-3px);background:rgba(255,255,255,0.1)}
+  .features-dark .feature-card h3{color:#fff;margin-bottom:8px}
+  .features-dark .feature-card p{color:#888;font-size:.95rem;margin:0}
+  .features-dark .icon{stroke:#fff}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .price{font-family:"Space Grotesk";font-size:2rem;letter-spacing:-.02em;margin:8px 0}
+  .price small{font-size:.95rem;color:var(--muted);font-family:"Plus Jakarta Sans"}
+  .recommended{border:2px solid #111;box-shadow:0 18px 40px #0000000d;transform:translateY(-6px)}
+  .list{padding-left:18px;margin:10px 0 0}
+  .list li{margin:8px 0;color:#222}
+  .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .quote{background:var(--bg-soft);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden}
+  .quote::before{content:'"';position:absolute;top:8px;left:20px;font-family:"Space Grotesk",sans-serif;font-size:5rem;line-height:1;color:var(--line);font-weight:700}
+  .quote p{font-size:1.05rem;line-height:1.6;margin:0 0 16px;position:relative}
+  .quote-author{display:flex;align-items:center;gap:12px}
+  .quote-avatar{width:44px;height:44px;background:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1rem}
+  .quote-name{font-weight:700;font-size:.95rem}
+  .quote-role{font-size:.85rem;color:var(--muted)}
+  .faq{display:grid;gap:12px}
+  details{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff}
+  summary{font-weight:700;cursor:pointer}
+  .sticky-mobile{display:none}
+  @media (max-width:980px){
+    .hero,.grid-3,.grid-4,.pricing-grid,.proof{grid-template-columns:1fr}
+    section{padding:66px 0}
+    .features-dark{padding:66px 0}
+    .recommended{transform:none}
+    .sticky-mobile{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;box-shadow:0 14px 30px #0000002e}
+    body{padding-bottom:80px}
+  }
+</style>
+{% endblock %}
+
+<div class="gm-container">
+  <section class="hero">
+    <div>
+      <span class="eyebrow"><i data-lucide="shield-check" class="icon" style="margin:0;width:16px;height:16px"></i>Built by martial arts operators</span>
+      <h1>Lead Strong.<br>Run Smart.</h1>
+      <p class="sub">Gripmode helps martial arts schools run with operational discipline: better retention control, cleaner reporting, and faster team execution.</p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="#trial">Start Free Trial</a>
+        <a class="btn btn-light" href="#pricing">View Pricing</a>
+      </div>
+    </div>
+    <aside class="panel">
+      <div class="panel-header">What changes in 30 days</div>
+      <div class="panel-sub">In just one month, you'll have a school that runs itself. Here's exactly what improves:</div>
+      <div class="mini-grid">
+        <div class="mini">
+          <div class="mini-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="mini-content">
+            <strong>Payroll saved $500+</strong>
+            <span>Automated calculations eliminate costly errors</span>
+          </div>
+        </div>
+        <div class="mini">
+          <div class="mini-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="mini-content">
+            <strong>10+ hours/week back</strong>
+          </div>
+        </div>
+        <div class="mini">
+          <div class="mini-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+          <div class="mini-content">
+            <strong>Clear growth path</strong>
+            <span>Data-driven decisions replace guesswork</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section>
+    <h2>Why schools choose Gripmode</h2>
+    <p class="section-intro">Most school software is bloated, expensive, and not built for how martial arts teams actually operate day-to-day. Gripmode is intentionally focused on practical execution.</p>
+    <div class="grid-4">
+      <article class="value-prop-card">
+        <div class="value-header">
+          <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+          <div class="value">50%</div>
+        </div>
+        <div class="label">Less Cost</div>
+        <p>Pay $19-79/mo vs $150+ for legacy tools</p>
+      </article>
+      <article class="value-prop-card">
+        <div class="value-header">
+          <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="value">5 min</div>
+        </div>
+        <div class="label">Setup Time</div>
+        <p>Import your data and go -- not weeks of configuration</p>
+      </article>
+      <article class="value-prop-card">
+        <div class="value-header">
+          <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="value">Live</div>
+        </div>
+        <div class="label">Real-Time Data</div>
+        <p>Dashboards update instantly. No waiting for reports.</p>
+      </article>
+      <article class="value-prop-card">
+        <div class="value-header">
+          <div class="value-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <div class="value">Safe</div>
+        </div>
+        <div class="label">Payroll Locking</div>
+        <p>Lock pay periods to prevent expensive mistakes</p>
+      </article>
+    </div>
+    <div class="grid-3" style="margin-top:24px">
+      <article class="card">
+        <i data-lucide="workflow" class="icon"></i>
+        <h3>Operational Discipline</h3>
+        <p style="color:var(--muted)">A single workflow for owners, coaches, and front desk -- consistent, measurable, and easy to run.</p>
+      </article>
+      <article class="card">
+        <i data-lucide="activity" class="icon"></i>
+        <h3>Retention & Revenue Control</h3>
+        <p style="color:var(--muted)">Surface churn risk earlier and take action before students silently disappear.</p>
+      </article>
+      <article class="card">
+        <i data-lucide="clock-3" class="icon"></i>
+        <h3>Leadership Time Back</h3>
+        <p style="color:var(--muted)">Replace admin firefighting with structured systems your team can execute daily.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<section class="features-dark">
+  <div class="gm-container">
+    <h2>Everything you need</h2>
+    <p class="section-intro">13 modules built specifically for martial arts operations. No bloat. Just what works.</p>
+    <div class="grid-3">
+      <article class="feature-card">
+        <i data-lucide="bar-chart-3" class="icon"></i>
+        <h3>Analytics Dashboard</h3>
+        <p>Real-time insights on members, revenue, churn, and retention by location.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="users" class="icon"></i>
+        <h3>Team Management</h3>
+        <p>Multi-role access, pay rates, commissions, and location assignments.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="calendar" class="icon"></i>
+        <h3>Smart Scheduling</h3>
+        <p>Weekly grid, multi-assign coaches, lock weeks, and clone schedules.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="dollar-sign" class="icon"></i>
+        <h3>Automated Payroll</h3>
+        <p>Class pay, private lessons, salaries, commissions -- calculated automatically.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="package" class="icon"></i>
+        <h3>Inventory System</h3>
+        <p>Product catalog, stock tracking, low-stock alerts, and full audit trail.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="building-2" class="icon"></i>
+        <h3>Multi-Location</h3>
+        <p>Manage unlimited gyms from one dashboard with per-location controls.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="lock" class="icon"></i>
+        <h3>Payroll Locking</h3>
+        <p>Lock periods to prevent accidental edits. Full audit trail included.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="smartphone" class="icon"></i>
+        <h3>Retention Alerts</h3>
+        <p>Spot at-risk students before they leave. Early warning system.</p>
+      </article>
+      <article class="feature-card">
+        <i data-lucide="file-text" class="icon"></i>
+        <h3>Attendance Tracking</h3>
+        <p>Track student attendance, belt progression, and grading results.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="gm-container">
+  <section id="pricing">
+    <h2>Pricing</h2>
+    <p class="section-intro">Simple plans, transparent monthly pricing, 7-day free trial, no mandatory sales call.</p>
+    <div class="pricing-grid">
+      <article class="card">
+        <h3>Starter</h3>
+        <div class="price">$19 <small>/month</small></div>
+        <p style="color:var(--muted)">For early-stage schools up to 150 members</p>
+        <ul class="list">
+          <li>Core operations dashboard</li>
+          <li>Basic retention alerts</li>
+          <li>Team management</li>
+          <li>Basic scheduling</li>
+          <li>1 location</li>
+          <li>Email support</li>
+        </ul>
+        <a class="btn btn-light" href="#trial" style="margin-top:12px;width:100%">Start Trial</a>
+      </article>
+      <article class="card recommended">
+        <h3>Growth <span style="font-size:.9rem;color:#555">(Most Popular)</span></h3>
+        <div class="price">$39 <small>/month</small></div>
+        <p style="color:var(--muted)">For established schools scaling operations</p>
+        <ul class="list">
+          <li>Everything in Starter</li>
+          <li>Full payroll system</li>
+          <li>Advanced retention workflows</li>
+          <li>Inventory management</li>
+          <li>Analytics dashboard</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="btn btn-dark" href="#trial" style="margin-top:12px;width:100%">Start Trial</a>
+      </article>
+      <article class="card">
+        <h3>Multi-Location</h3>
+        <div class="price">$79 <small>/month</small></div>
+        <p style="color:var(--muted)">For operators with 2+ schools</p>
+        <ul class="list">
+          <li>Everything in Growth</li>
+          <li>Unlimited locations</li>
+          <li>Cross-location reporting</li>
+          <li>Centralized controls</li>
+          <li>Custom integrations</li>
+          <li>Dedicated support</li>
+        </ul>
+        <a class="btn btn-light" href="#trial" style="margin-top:12px;width:100%">Contact Sales</a>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trusted by operators</h2>
+    <div class="proof">
+      {% set quote = "Finally a platform that matches how martial arts schools really run. No bloat, just what we need." %}
+      {% set initials = "MR" %}
+      {% set name = "Marcus Rodriguez" %}
+      {% set role = "Martial Arts School Owner" %}
+      {% include "testimonial.njk" %}
+
+      {% set quote = "The team executes faster because priorities are clear for everyone. Best decision we made this year." %}
+      {% set initials = "SK" %}
+      {% set name = "Sarah Kim" %}
+      {% set role = "Head Coach" %}
+      {% include "testimonial.njk" %}
+
+      {% set quote = "We got visibility and control without adding software complexity. Our retention improved 18% in 60 days." %}
+      {% set initials = "JT" %}
+      {% set name = "James Torres" %}
+      {% set role = "BJJ Academy Director" %}
+      {% include "testimonial.njk" %}
+    </div>
+  </section>
+
+  <section>
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details><summary>Is this generic gym software?</summary><p style="color:var(--muted)">No. Gripmode is purpose-built for martial arts school operations -- not generic gyms, CrossFit boxes, or yoga studios.</p></details>
+      <details><summary>Can I cancel during the trial?</summary><p style="color:var(--muted)">Yes. You can cancel anytime during the 7-day trial window with no charge.</p></details>
+      <details><summary>Do you offer data import?</summary><p style="color:var(--muted)">Yes. We can import your existing member and schedule data to get you running quickly.</p></details>
+    </div>
+  </section>
+
+  {% include "cta-section.njk" %}
+</div>
+
+<a class="btn btn-dark sticky-mobile" href="#trial" style="width:auto">Start Free Trial</a>

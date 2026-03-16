@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "best-software-for-bjj-schools",
+    "title": "Best Software for BJJ Schools in 2026",
+    "metaDesc": "Compare the best management software for BJJ schools. Features, pricing, and why Gripmode is the top choice for Brazilian Jiu-Jitsu academies.",
+    "heading": "Best Software for BJJ Schools",
+    "intro": "Finding the right software for your BJJ academy means looking beyond generic gym tools. You need belt tracking, gi/no-gi class management, and competition support.",
+    "criteria": ["BJJ-specific belt and stripe tracking", "Gi and no-gi class management", "Competition and tournament support", "Coach payroll with class-type rates", "Student progression tracking"],
+    "competitors": ["Zen Planner", "Kicksite", "Spark Membership", "MartialGym"],
+    "whyGripmode": ["Purpose-built BJJ belt and stripe system", "Separate gi and no-gi class tracking", "Tournament bracket management", "Coach payroll calculated by class type", "Student mat time and progression analytics", "Starting at just $19/mo"]
+  },
+  {
+    "slug": "best-software-for-martial-arts-schools",
+    "title": "Best Martial Arts School Management Software in 2026",
+    "metaDesc": "Compare the best martial arts school management software. Detailed analysis of features, pricing, and which platform is best for your school.",
+    "heading": "Best Martial Arts School Management Software",
+    "intro": "Your martial arts school deserves software built for how you actually operate — not a generic fitness platform with martial arts bolted on.",
+    "criteria": ["Martial arts-specific features (belt tracking, curriculum)", "Scheduling with multi-coach and multi-discipline support", "Automated coach payroll", "Retention and churn analytics", "Affordable for independent school owners"],
+    "competitors": ["Zen Planner", "Kicksite", "PushPress", "MindBody", "Glofox", "MartialGym"],
+    "whyGripmode": ["Built exclusively for martial arts operations", "All-in-one: scheduling, payroll, CRM, analytics", "Starting at $19/mo — 50-80% less than alternatives", "5-minute setup, no sales call required", "Multi-location management included", "Real-time dashboards and retention alerts"]
+  },
+  {
+    "slug": "best-crm-for-martial-arts",
+    "title": "Best CRM for Martial Arts Schools in 2026",
+    "metaDesc": "Find the best CRM for martial arts schools. Compare lead management features, pricing, and automation for converting prospects into students.",
+    "heading": "Best CRM for Martial Arts Schools",
+    "intro": "A great CRM for martial arts schools does more than store contacts. It tracks the entire journey from first inquiry to loyal member.",
+    "criteria": ["Lead capture from website and walk-ins", "Automated follow-up sequences", "Trial-to-member conversion tracking", "Integration with class scheduling", "Source attribution and ROI tracking"],
+    "competitors": ["Kicksite", "Zen Planner", "Spark Membership", "Generic CRMs (HubSpot, Salesforce)"],
+    "whyGripmode": ["CRM built into your school management platform", "Automated follow-up for trial students", "Visual lead pipeline with drag-and-drop", "Lead source tracking to measure marketing ROI", "Seamless connection to scheduling and member profiles", "No extra CRM subscription needed"]
+  },
+  {
+    "slug": "best-payroll-for-martial-arts-schools",
+    "title": "Best Payroll Solution for Martial Arts Schools in 2026",
+    "metaDesc": "Compare payroll solutions for martial arts schools. Auto-calculated class pay, commission tracking, and pay period locking for error-free operations.",
+    "heading": "Best Payroll for Martial Arts Schools",
+    "intro": "Martial arts school payroll is uniquely complex: class-based pay, private lesson rates, commissions, and varying schedules. You need a payroll system that understands this.",
+    "criteria": ["Auto-calculation from class attendance", "Multiple pay types (per-class, hourly, salary, commission)", "Pay period locking to prevent errors", "Integration with scheduling", "Exportable payroll reports"],
+    "competitors": ["Spreadsheets/manual calculation", "Generic payroll (Gusto, ADP)", "Zen Planner", "Kicksite"],
+    "whyGripmode": ["Payroll auto-calculates from class attendance data", "Supports per-class, hourly, salary, and commission pay types", "Pay period locking prevents retroactive mistakes", "Fully integrated with scheduling — no double entry", "Complete audit trail on every calculation", "Included in all Growth and Multi-Location plans"]
+  }
+]

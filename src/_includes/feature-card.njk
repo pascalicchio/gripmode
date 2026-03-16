@@ -1,0 +1,5 @@
+<article class="feature-card" {% if dark %}style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1)"{% endif %}>
+  {% if icon %}<i data-lucide="{{ icon }}" class="icon" {% if dark %}style="stroke:#fff"{% endif %}></i>{% endif %}
+  <h3>{{ cardTitle }}</h3>
+  <p>{{ cardDescription }}</p>
+</article>

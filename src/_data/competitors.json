@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "zen-planner",
+    "name": "Zen Planner",
+    "fullName": "Zen Planner",
+    "description": "Legacy gym management software with broad fitness focus. Higher pricing, complex setup, and designed for general fitness rather than martial arts-specific workflows.",
+    "pricing": "From $117/mo",
+    "founded": "2006",
+    "focus": "General fitness & martial arts",
+    "strengths": ["Established brand", "Wide integration network", "Comprehensive billing"],
+    "weaknesses": ["Expensive for small schools", "Complex setup process", "Not martial arts-specific", "Outdated interface"],
+    "gripmodeAdvantages": ["50-80% lower cost", "5-minute setup vs weeks", "Built specifically for martial arts", "Modern, intuitive interface", "Automated payroll included", "Real-time analytics dashboard"]
+  },
+  {
+    "slug": "kicksite",
+    "name": "Kicksite",
+    "fullName": "Kicksite",
+    "description": "Martial arts-focused management software. Good for basic operations but lacks advanced payroll, analytics, and multi-location features.",
+    "pricing": "From $49/mo",
+    "founded": "2009",
+    "focus": "Martial arts schools",
+    "strengths": ["Martial arts focused", "Belt tracking", "Affordable mid-tier"],
+    "weaknesses": ["Limited payroll features", "Basic analytics", "No multi-location management", "Limited automation"],
+    "gripmodeAdvantages": ["Automated payroll system", "Advanced retention analytics", "Multi-location management", "Real-time dashboards", "Lower entry price at $19/mo", "Modern UX design"]
+  },
+  {
+    "slug": "pushpress",
+    "name": "PushPress",
+    "fullName": "PushPress",
+    "description": "Gym management platform popular with CrossFit boxes. Strong billing features but not designed for martial arts-specific needs like belt tracking and tournament management.",
+    "pricing": "From $159/mo",
+    "founded": "2013",
+    "focus": "CrossFit & functional fitness",
+    "strengths": ["Strong billing/payments", "Good mobile app", "CrossFit community"],
+    "weaknesses": ["Not martial arts focused", "High price point", "No belt tracking", "No tournament features"],
+    "gripmodeAdvantages": ["Purpose-built for martial arts", "Belt and rank tracking", "Tournament management", "75% lower starting price", "Martial arts-specific analytics", "Coach payroll automation"]
+  },
+  {
+    "slug": "spark-membership",
+    "name": "Spark Membership",
+    "fullName": "Spark Membership",
+    "description": "Membership management tool for martial arts and fitness. Basic features at a reasonable price but lacks depth in payroll, analytics, and operational tools.",
+    "pricing": "From $79/mo",
+    "founded": "2015",
+    "focus": "Martial arts & fitness memberships",
+    "strengths": ["Membership management", "Reasonable pricing", "Simple interface"],
+    "weaknesses": ["Limited payroll", "Basic reporting", "No multi-location", "Limited integrations"],
+    "gripmodeAdvantages": ["Full payroll automation", "Advanced analytics dashboard", "Multi-location support", "Lower starting price", "CRM and lead management", "Inventory tracking"]
+  },
+  {
+    "slug": "wodify",
+    "name": "Wodify",
+    "fullName": "Wodify",
+    "description": "Performance tracking and gym management platform built for CrossFit. Strong workout tracking but lacks martial arts-specific features.",
+    "pricing": "From $149/mo",
+    "founded": "2012",
+    "focus": "CrossFit & performance tracking",
+    "strengths": ["Workout tracking", "Performance metrics", "Community features"],
+    "weaknesses": ["CrossFit-centric", "No martial arts features", "Expensive", "Complex for simple operations"],
+    "gripmodeAdvantages": ["Designed for martial arts operations", "Belt and curriculum tracking", "Coach payroll automation", "80% lower starting price", "Simpler setup and daily use", "Retention-focused analytics"]
+  },
+  {
+    "slug": "mindbody",
+    "name": "MindBody",
+    "fullName": "Mindbody",
+    "description": "Enterprise-level wellness and fitness platform. Massive feature set but extremely expensive, complex, and not designed for martial arts operations.",
+    "pricing": "From $139/mo",
+    "founded": "2001",
+    "focus": "Wellness, fitness, beauty",
+    "strengths": ["Marketplace exposure", "Enterprise features", "Wide adoption"],
+    "weaknesses": ["Very expensive", "Overwhelming complexity", "Not martial arts focused", "Long contracts", "Poor support for small schools"],
+    "gripmodeAdvantages": ["85% lower starting cost", "Purpose-built for martial arts", "No long-term contracts", "5-minute setup vs weeks", "Dedicated martial arts features", "Transparent pricing"]
+  },
+  {
+    "slug": "glofox",
+    "name": "Glofox",
+    "fullName": "Glofox (ABC Fitness)",
+    "description": "Boutique fitness management platform acquired by ABC Fitness. Strong on mobile app and branding but expensive and not martial arts-specific.",
+    "pricing": "Custom pricing (typically $200+/mo)",
+    "founded": "2014",
+    "focus": "Boutique fitness studios",
+    "strengths": ["Branded mobile app", "Good UX design", "Marketing tools"],
+    "weaknesses": ["Very expensive", "Not martial arts focused", "Custom pricing opacity", "No payroll features"],
+    "gripmodeAdvantages": ["Transparent pricing from $19/mo", "Martial arts-specific features", "Built-in payroll system", "No sales call required", "Belt and rank tracking", "Tournament management"]
+  },
+  {
+    "slug": "martialgym",
+    "name": "MartialGym",
+    "fullName": "MartialGym",
+    "description": "Niche martial arts management tool. Martial arts focus but limited feature set, older technology, and minimal analytics capabilities.",
+    "pricing": "From $59/mo",
+    "founded": "2016",
+    "focus": "Martial arts schools",
+    "strengths": ["Martial arts focused", "Belt management", "Reasonable price"],
+    "weaknesses": ["Limited feature set", "Dated technology", "Minimal analytics", "No payroll automation", "Small development team"],
+    "gripmodeAdvantages": ["Modern technology stack", "Automated payroll", "Advanced analytics dashboard", "Multi-location management", "Real-time reporting", "Active development and updates"]
+  }
+]

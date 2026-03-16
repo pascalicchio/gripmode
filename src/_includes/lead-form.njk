@@ -1,0 +1,31 @@
+<form id="leadForm" style="display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px;margin-top:14px" class="lead-form">
+  <input id="leadName" placeholder="Your name" required style="padding:12px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;transition:background .2s" onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'" onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+  <input id="leadEmail" type="email" placeholder="Work email" required style="padding:12px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;transition:background .2s" onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'" onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+  <input id="leadSchool" placeholder="School name" required style="padding:12px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;transition:background .2s" onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'" onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+  <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:10px;background:#fff;color:#111;font:inherit;font-weight:700;border:1px solid #e5e7eb;cursor:pointer;white-space:nowrap">Request Access</button>
+</form>
+<p id="leadOk" style="display:none;color:#8cf0cc;margin-top:12px;font-weight:700">Request captured. We'll contact you with next steps.</p>
+<script>
+  (function() {
+    const form = document.getElementById('leadForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById('leadName').value.trim(),
+        email: document.getElementById('leadEmail').value.trim(),
+        school: document.getElementById('leadSchool').value.trim(),
+        at: new Date().toISOString()
+      };
+      if (!payload.name || !payload.email || !payload.school) return;
+      localStorage.setItem('gripmode_lead', JSON.stringify(payload));
+      document.getElementById('leadOk').style.display = 'block';
+      form.reset();
+    });
+  })();
+</script>
+<style>
+  @media (max-width: 980px) {
+    .lead-form { grid-template-columns: 1fr !important; }
+  }
+</style>

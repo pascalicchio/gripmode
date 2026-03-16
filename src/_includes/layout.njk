@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or "Gripmode — Lead Strong. Run Smart." }}</title>
+  <meta name="description" content="{{ metaDesc or 'Operational system for martial arts schools: retention, reporting, and execution in one disciplined workflow.' }}" />
+  <link rel="canonical" href="https://gripmode.app{{ page.url }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title or 'Gripmode — Lead Strong. Run Smart.' }}" />
+  <meta property="og:description" content="{{ metaDesc or 'Operational system for martial arts schools: retention, reporting, and execution in one disciplined workflow.' }}" />
+  <meta property="og:url" content="https://gripmode.app{{ page.url }}" />
+  <meta property="og:type" content="{{ ogType or 'website' }}" />
+  <meta property="og:site_name" content="Gripmode" />
+  {% if ogImage %}
+  <meta property="og:image" content="https://gripmode.app{{ ogImage }}" />
+  {% endif %}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ title or 'Gripmode — Lead Strong. Run Smart.' }}" />
+  <meta name="twitter:description" content="{{ metaDesc or 'Operational system for martial arts schools.' }}" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Styles -->
+  <style>
+    /* Critical inline styles for layout stability */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; background: #fff; color: #0f1115; line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: "Space Grotesk", sans-serif; line-height: 1.08; margin: 0 0 14px; }
+    h1 { font-size: clamp(2.5rem, 5.2vw, 4.8rem); letter-spacing: -0.03em; }
+    h2 { font-size: clamp(2rem, 3.8vw, 3rem); letter-spacing: -0.02em; }
+    .gm-container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  </style>
+
+  {% block schema %}
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Gripmode",
+    "url": "https://gripmode.app",
+    "description": "Martial arts school management software — retention, payroll, scheduling, and operations in one platform.",
+    "sameAs": []
+  }
+  </script>
+  {% endblock %}
+
+  {% block extraHead %}{% endblock %}
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+  {% include "header.njk" %}
+
+  {% if breadcrumbs %}
+  <nav aria-label="Breadcrumb" style="background:#f7f8fa;border-bottom:1px solid #e5e7eb">
+    <div class="gm-container" style="display:flex;align-items:center;gap:8px;padding-top:12px;padding-bottom:12px;font-size:.85rem;color:#5f6672;flex-wrap:wrap">
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {% for crumb in breadcrumbs %}
+          {
+            "@type": "ListItem",
+            "position": {{ loop.index }},
+            "name": "{{ crumb.name }}",
+            "item": "https://gripmode.app{{ crumb.url }}"
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      }
+      </script>
+      {% for crumb in breadcrumbs %}
+        {% if loop.last %}
+          <span style="color:#0f1115;font-weight:600">{{ crumb.name }}</span>
+        {% else %}
+          <a href="{{ crumb.url }}" style="color:#5f6672;text-decoration:none" onmouseover="this.style.color='#0f1115'" onmouseout="this.style.color='#5f6672'">{{ crumb.name }}</a>
+          <span style="color:#d1d5db">›</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+  {% endif %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script>lucide.createIcons();</script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.onclick = e => {
+        const el = document.querySelector(a.getAttribute('href'));
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+      };
+    });
+  </script>
+  {% block extraScripts %}{% endblock %}
+</body>
+</html>

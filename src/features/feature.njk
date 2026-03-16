@@ -1,0 +1,147 @@
+---
+layout: layout.njk
+pagination:
+  data: features
+  size: 1
+  alias: feature
+permalink: "/features/{{ feature.slug }}/"
+eleventyComputed:
+  title: "{{ feature.title | safe }} — Gripmode"
+  metaDesc: "{{ feature.metaDesc | safe }}"
+  breadcrumbs:
+    - { name: "Home", url: "/" }
+    - { name: "Features", url: "/features/" }
+    - { name: "{{ feature.title | safe }}", url: "/features/{{ feature.slug }}/" }
+---
+
+<!-- Hero -->
+<section style="padding:100px 0 70px;background:#fff">
+  <div class="gm-container">
+    <div style="width:56px;height:56px;background:#f7f8fa;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px">
+      <i data-lucide="{{ feature.icon }}" style="width:28px;height:28px;color:#0f1115"></i>
+    </div>
+    <h1 style="margin-bottom:18px">{{ feature.title }}</h1>
+    <p style="font-size:1.25rem;color:#5f6672;max-width:640px;line-height:1.7;margin:0 0 36px">{{ feature.tagline }}</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#trial" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:12px;background:#111315;color:#fff;text-decoration:none;font-weight:700;font-size:1rem;border:none">Start Free Trial</a>
+      <a href="/features/" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:12px;background:#fff;color:#0f1115;text-decoration:none;font-weight:700;font-size:1rem;border:1px solid #e5e7eb">See All Features</a>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section style="padding:70px 0;background:#f7f8fa">
+  <div class="gm-container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start" class="benefits-grid">
+      <div>
+        <p style="font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#5f6672;margin:0 0 14px">Benefits</p>
+        <h2 style="margin-bottom:16px;font-size:clamp(1.8rem,3vw,2.4rem)">Why schools choose Gripmode for {{ feature.title | lower }}</h2>
+        <p style="color:#5f6672;line-height:1.7;font-size:1.05rem">{{ feature.metaDesc }}</p>
+      </div>
+      <div>
+        <ul style="list-style:none;padding:0;margin:0">
+          {% for benefit in feature.benefits %}
+          <li style="display:flex;align-items:flex-start;gap:14px;padding:18px 0;{% if not loop.last %}border-bottom:1px solid #e5e7eb;{% endif %}">
+            <div style="flex-shrink:0;width:28px;height:28px;background:#0f1115;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-top:1px">
+              <i data-lucide="check" style="width:16px;height:16px;color:#fff"></i>
+            </div>
+            <span style="font-size:1.02rem;line-height:1.6;color:#0f1115;font-weight:500">{{ benefit }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section style="padding:80px 0;background:#fff">
+  <div class="gm-container">
+    <div style="text-align:center;max-width:620px;margin:0 auto 48px">
+      <p style="font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#5f6672;margin:0 0 14px">Capabilities</p>
+      <h2 style="margin-bottom:14px">What's included</h2>
+      <p style="color:#5f6672;font-size:1.05rem;line-height:1.7">Everything you need for {{ feature.title | lower }}, built into one platform.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px" class="capabilities-grid">
+      {% for feat in feature.features %}
+      <div style="padding:24px;background:#f7f8fa;border-radius:12px;text-align:center">
+        <div style="width:40px;height:40px;background:#0f1115;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px">
+          <i data-lucide="check" style="width:18px;height:18px;color:#fff"></i>
+        </div>
+        <span style="font-weight:600;font-size:.95rem;color:#0f1115">{{ feat }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section style="padding:80px 0;background:#0f1114;color:#fff">
+  <div class="gm-container">
+    <div style="text-align:center;max-width:620px;margin:0 auto 56px">
+      <p style="font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#888;margin:0 0 14px">How It Works</p>
+      <h2 style="color:#fff;margin-bottom:14px">Three steps to get started</h2>
+      <p style="color:#999;font-size:1.05rem;line-height:1.7">{{ feature.title }} in Gripmode is designed to be intuitive from day one.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px" class="steps-grid">
+      {% for step in feature.howItWorks %}
+      <div style="position:relative">
+        <div style="width:48px;height:48px;border:2px solid #333;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:20px">{{ loop.index }}</div>
+        <h3 style="font-size:1.15rem;color:#fff;margin-bottom:10px">{{ step.step }}</h3>
+        <p style="color:#999;font-size:.95rem;line-height:1.7;margin:0">{{ step.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Related Features -->
+<section style="padding:80px 0;background:#fff">
+  <div class="gm-container">
+    <div style="text-align:center;max-width:620px;margin:0 auto 48px">
+      <p style="font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#5f6672;margin:0 0 14px">Explore More</p>
+      <h2 style="margin-bottom:14px">Related features</h2>
+      <p style="color:#5f6672;font-size:1.05rem;line-height:1.7">{{ feature.title }} works even better with these Gripmode modules.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px" class="related-grid">
+      {% for relSlug in feature.related %}
+        {% for f in features %}
+          {% if f.slug == relSlug %}
+          <a href="/features/{{ f.slug }}/" style="display:block;text-decoration:none;color:inherit;padding:32px 28px;border:1px solid #e5e7eb;border-radius:16px;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='#111315';this.style.boxShadow='0 4px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
+            <div style="width:44px;height:44px;background:#f7f8fa;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+              <i data-lucide="{{ f.icon }}" style="width:22px;height:22px;color:#0f1115"></i>
+            </div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px">{{ f.title }}</h3>
+            <p style="color:#5f6672;font-size:.9rem;line-height:1.6;margin:0">{{ f.tagline }}</p>
+            <span style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:600;font-size:.88rem;color:#0f1115">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px"></i></span>
+          </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:80px 0">
+  <div class="gm-container">
+    <div style="background:#0f1115;color:#fff;border-radius:20px;padding:60px 48px;text-align:center">
+      <h2 style="color:#fff;margin-bottom:8px">Try {{ feature.title }} free for 7 days</h2>
+      <p style="color:#c2c7d1;font-size:1.05rem;max-width:540px;margin:0 auto 0;line-height:1.7">No credit card required. Your school is live in minutes.</p>
+      {% set formId = "Feature" %}
+      {% include "signup-form.njk" %}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 980px) {
+    .benefits-grid { grid-template-columns: 1fr !important; }
+    .capabilities-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .steps-grid { grid-template-columns: 1fr !important; }
+    .related-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 600px) {
+    .capabilities-grid { grid-template-columns: 1fr !important; }
+  }
+</style>

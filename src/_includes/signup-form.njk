@@ -1,0 +1,97 @@
+<form id="signupForm{{ formId or '' }}" class="signup-form" novalidate>
+  <div class="signup-form-fields">
+    <input type="text" name="name" placeholder="Your full name" required autocomplete="name"
+      style="padding:13px 14px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;font-size:.95rem;transition:all .15s;width:100%"
+      onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'"
+      onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+    <input type="email" name="email" placeholder="Work email" required autocomplete="email"
+      style="padding:13px 14px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;font-size:.95rem;transition:all .15s;width:100%"
+      onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'"
+      onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+    <input type="text" name="gym_name" placeholder="School / gym name" required
+      style="padding:13px 14px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;font-size:.95rem;transition:all .15s;width:100%"
+      onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'"
+      onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+    <input type="password" name="password" placeholder="Password (8+ characters)" required minlength="8" autocomplete="new-password"
+      style="padding:13px 14px;border-radius:10px;border:1px solid #303641;background:#15181d;color:#fff;font:inherit;font-size:.95rem;transition:all .15s;width:100%"
+      onfocus="this.style.background='#fff';this.style.color='#000';this.style.borderColor='#fff'"
+      onblur="if(!this.value){this.style.background='#15181d';this.style.color='#fff';this.style.borderColor='#303641'}">
+    <button type="submit" class="signup-submit-btn"
+      style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:10px;background:#fff;color:#111315;font:inherit;font-weight:700;font-size:.95rem;border:none;cursor:pointer;white-space:nowrap;transition:opacity .15s">
+      Start Free Trial <span class="btn-arrow" style="font-size:1.1rem">→</span>
+    </button>
+  </div>
+  <p class="signup-error" style="display:none;color:#f87171;margin-top:10px;font-size:.88rem"></p>
+  <p style="color:#888;font-size:.78rem;margin-top:10px">7-day free trial · No credit card required · Cancel anytime</p>
+</form>
+
+<style>
+  .signup-form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-top: 16px;
+    align-items: start;
+  }
+  @media (max-width: 1024px) {
+    .signup-form-fields { grid-template-columns: 1fr 1fr; }
+    .signup-submit-btn { grid-column: 1 / -1; }
+  }
+  @media (max-width: 640px) {
+    .signup-form-fields { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+(function() {
+  const formId = 'signupForm{{ formId or "" }}';
+  const form = document.getElementById(formId);
+  if (!form) return;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.signup-submit-btn');
+    const errorEl = form.querySelector('.signup-error');
+    const arrow = form.querySelector('.btn-arrow');
+
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    arrow.textContent = '...';
+    errorEl.style.display = 'none';
+
+    const data = {
+      name: form.querySelector('[name="name"]').value.trim(),
+      email: form.querySelector('[name="email"]').value.trim(),
+      gym_name: form.querySelector('[name="gym_name"]').value.trim(),
+      password: form.querySelector('[name="password"]').value,
+    };
+
+    try {
+      const res = await fetch('https://dash.gripmode.app/api/v1/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        window.location.href = 'https://dash.gripmode.app' + (json.redirect || '/');
+      } else {
+        const msg = json.message || (json.errors ? Object.values(json.errors).flat().join(' ') : 'Something went wrong. Please try again.');
+        errorEl.textContent = msg;
+        errorEl.style.display = 'block';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        arrow.textContent = '→';
+      }
+    } catch (err) {
+      errorEl.textContent = 'Unable to connect. Please try again.';
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      arrow.textContent = '→';
+    }
+  });
+})();
+</script>
