@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
       .getFilteredByGlob("src/blog/*/index.njk")
       .filter((post) => {
         if (post.data.draft) return false;
-        if (!post.data.category) return false; // listing/category pages have no category
+        if (!post.data.category) return false;
         if (post.data.publishDate && new Date(post.data.publishDate) > new Date()) return false;
         return true;
       })
