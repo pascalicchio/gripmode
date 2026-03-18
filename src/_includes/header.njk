@@ -26,10 +26,13 @@
       <a class="btn btn-dark" href="/signup/" style="width:auto;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:12px;background:#111315;color:#fff;text-decoration:none;font-weight:700;border:none">Start Free Trial</a>
     </nav>
 
-    <!-- Mobile Hamburger -->
-    <button class="mobile-toggle" style="display:none;background:none;border:none;cursor:pointer;padding:8px;color:#0f1115" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Toggle menu">
-      <i data-lucide="menu" style="width:24px;height:24px;color:#0f1115"></i>
-    </button>
+    <!-- Mobile: Login + Hamburger -->
+    <div class="mobile-actions" style="display:none;align-items:center;gap:4px">
+      <a href="https://dash.gripmode.app/login" style="font-weight:600;font-size:.88rem;text-decoration:none;color:#0f1115;padding:8px 10px">Log in</a>
+      <button class="mobile-toggle" style="background:none;border:none;cursor:pointer;padding:8px;color:#0f1115" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Toggle menu">
+        <i data-lucide="menu" style="width:24px;height:24px;color:#0f1115"></i>
+      </button>
+    </div>
   </div>
 
   <!-- Mobile Menu -->
@@ -38,14 +41,13 @@
     <a href="/pricing/" style="display:block;padding:12px 0;font-weight:600;text-decoration:none;color:#0f1115;border-bottom:1px solid #f0f0f0">Pricing</a>
     <a href="/blog/" style="display:block;padding:12px 0;font-weight:600;text-decoration:none;color:#0f1115;border-bottom:1px solid #f0f0f0">Blog</a>
     <a href="/about/" style="display:block;padding:12px 0;font-weight:600;text-decoration:none;color:#0f1115;border-bottom:1px solid #f0f0f0">About</a>
-    <a href="https://dash.gripmode.app/login" style="display:block;padding:12px 0;font-weight:600;text-decoration:none;color:#0f1115;border-bottom:1px solid #f0f0f0">Log in</a>
     <a href="/signup/" style="display:block;padding:14px 0;font-weight:700;text-decoration:none;text-align:center;background:#111315;color:#fff;border-radius:12px;margin-top:12px">Start Free Trial</a>
   </div>
 
   <style>
     @media (max-width: 980px) {
       .desktop-nav { display: none !important; }
-      .mobile-toggle { display: block !important; }
+      .mobile-actions { display: flex !important; }
       .mobile-menu.open { display: block !important; }
     }
     .dropdown.open .dropdown-menu { display: block !important; }
